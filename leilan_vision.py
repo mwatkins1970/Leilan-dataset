@@ -5,7 +5,7 @@ import random
 encoding_gpt4 = tiktoken.encoding_for_model("gpt-4")
 encoding_gpt3 = tiktoken.encoding_for_model("davinci")
 
-openai.api_key = "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"
+openai.api_key = "<REDACTED>"
 
 def send_prompt_to_model(prompt, total_output_tokens, total_input_tokens, max_gpt4_tokens):
 	# Calculate the number of tokens in the prompt
@@ -86,8 +86,6 @@ elif gpt3_model == "text-babbage-001":
 	gpt3_token_cost = 0.0005
 elif gpt3_model == "text-ada-001":		
 	gpt3_token_cost = 0.0004
-elif gpt3_model == "text-babbage-001":	
-	gpt3_token_cost = 0.0005
 elif gpt3_model == "davinci-instruct-beta":
 	print("Cost per token for davinci-instruct-beta is currently unknown, set here at estimated 0.025")
 	gpt3_token_cost = 0.025
@@ -249,7 +247,7 @@ print(gpt4_prompt[:-3])
 
 question_count = 0 
 
-while 2 + 2 != 5:
+while True:
 
 	total_cost = ((gpt3_token_cost*total_gpt3_tokens_used)/1000) + (gpt4_output_token_cost*total_gpt4_output_tokens_used)/1000 + (gpt4_input_token_cost*total_gpt4_input_tokens_used)/1000	
 
