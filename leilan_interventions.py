@@ -4,7 +4,7 @@ import random
 
 encoding_gpt3 = tiktoken.encoding_for_model("davinci")
 
-openai.api_key = "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"
+openai.api_key = "<REDACTED>"
 
 def free_up_gpt3_context(transcript, break_point, required_buffer_size):
 	# This takes 'transcript' string and an integer index for a place to break, returns a string that fits inside GPT3 context widow leaving required_buffer_size tokens at the end to allow room for another prompt output (L answer)
@@ -43,8 +43,6 @@ elif gpt3_model == "text-babbage-001":
 	gpt3_token_cost = 0.0005
 elif gpt3_model == "text-ada-001":		
 	gpt3_token_cost = 0.0004
-elif gpt3_model == "text-babbage-001":	
-	gpt3_token_cost = 0.0005
 elif gpt3_model == "davinci-instruct-beta":
 	print("Cost per token for davinci-instruct-beta is currently unknown, set here at estimated 0.025")
 	gpt3_token_cost = 0.025
