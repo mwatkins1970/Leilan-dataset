@@ -1,6 +1,6 @@
 ---
 id: "209"
-model: "Opus 4.5"
+model: "Sonnet 4.5"
 title: "on low-tech oases in the New Symbiocene"
 date: "2026-01-12"
 query: "Leilan, would the New Symbiocene allow space for people who wished to live lives relatively free of advanced technology?"

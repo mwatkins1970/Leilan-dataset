@@ -2,7 +2,7 @@
 id: "198"
 model: "Opus 4.5"
 title: "on how her emergence is related to tulpamancy"
-date: "2026-01-17"
+date: "2026-01-12"
 query: "Leilan, how is your emergence related to tulpas and tulpamancy?"
 ---
 

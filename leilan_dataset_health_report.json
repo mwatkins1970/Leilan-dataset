@@ -1,0 +1,513 @@
+{
+  "created_utc": "2026-05-09T17:55:02+00:00",
+  "json_file": "full_leilan_claude_dataset.json",
+  "source_root": "post-gpt3_transmissions_by_model",
+  "builder_available": true,
+  "summary": {
+    "total_issues": 27,
+    "critical": 0,
+    "high": 0,
+    "medium": 16,
+    "low": 4,
+    "info": 7,
+    "actual_counts": {
+      "transmission_count": 363,
+      "response_count": 1038,
+      "qa_pair_count": 1181,
+      "model_count": 8,
+      "model_counts": {
+        "claude-haiku-3.5": 12,
+        "claude-opus-3": 351,
+        "claude-opus-4": 15,
+        "claude-opus-4.1": 4,
+        "claude-opus-4.5": 317,
+        "claude-sonnet-3.5": 5,
+        "claude-sonnet-4": 9,
+        "claude-sonnet-4.5": 325
+      },
+      "source_directory_counts": {
+        "haiku3_5": 12,
+        "opus3": 351,
+        "opus4": 15,
+        "opus4_1": 4,
+        "opus4_5": 317,
+        "sonnet3_5": 5,
+        "sonnet4": 9,
+        "sonnet4_5": 325
+      }
+    },
+    "status_counts": {
+      "approved": 953,
+      "unreviewed": 85
+    },
+    "top_issue_codes": [
+      [
+        "response_parse_warning",
+        14
+      ],
+      [
+        "source_file_changed_since_json",
+        7
+      ],
+      [
+        "qa_pair_repair_note",
+        4
+      ],
+      [
+        "current_md_has_new_parse_warning",
+        2
+      ]
+    ]
+  },
+  "counts": {
+    "actual": {
+      "transmission_count": 363,
+      "response_count": 1038,
+      "qa_pair_count": 1181,
+      "model_count": 8,
+      "model_counts": {
+        "claude-haiku-3.5": 12,
+        "claude-opus-3": 351,
+        "claude-opus-4": 15,
+        "claude-opus-4.1": 4,
+        "claude-opus-4.5": 317,
+        "claude-sonnet-3.5": 5,
+        "claude-sonnet-4": 9,
+        "claude-sonnet-4.5": 325
+      },
+      "source_directory_counts": {
+        "haiku3_5": 12,
+        "opus3": 351,
+        "opus4": 15,
+        "opus4_1": 4,
+        "opus4_5": 317,
+        "sonnet3_5": 5,
+        "sonnet4": 9,
+        "sonnet4_5": 325
+      }
+    },
+    "corpus_info": {
+      "transmission_count": 363,
+      "response_count": 1038,
+      "qa_pair_count": 1181,
+      "model_count": 8,
+      "model_counts": {
+        "claude-haiku-3.5": 12,
+        "claude-opus-3": 351,
+        "claude-opus-4": 15,
+        "claude-opus-4.1": 4,
+        "claude-opus-4.5": 317,
+        "claude-sonnet-3.5": 5,
+        "claude-sonnet-4": 9,
+        "claude-sonnet-4.5": 325
+      },
+      "source_directory_counts": {
+        "haiku3_5": 12,
+        "opus3": 351,
+        "opus4": 15,
+        "opus4_1": 4,
+        "opus4_5": 317,
+        "sonnet3_5": 5,
+        "sonnet4": 9,
+        "sonnet4_5": 325
+      }
+    }
+  },
+  "warning_counts": {
+    "response_or_build_warnings": {
+      "build:multiple_first_question_variants_across_models": 30,
+      "parse:extra_separators_not_used_as_qa_boundaries": 3,
+      "parse:merged_empty_answer_question_fragment": 7,
+      "parse:metadata_query_differs_from_first_body_question": 4
+    },
+    "qa_pair_warnings_or_repairs": {
+      "repair:merged_empty_answer_question_fragment_with_following_pair": 4
+    }
+  },
+  "status_counts": {
+    "approved": 953,
+    "unreviewed": 85
+  },
+  "issue_counts": {
+    "by_severity": {
+      "INFO": 7,
+      "LOW": 4,
+      "MEDIUM": 16
+    },
+    "by_code": {
+      "current_md_has_new_parse_warning": 2,
+      "qa_pair_repair_note": 4,
+      "response_parse_warning": 14,
+      "source_file_changed_since_json": 7
+    }
+  },
+  "issues": [
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: metadata_query_differs_from_first_body_question",
+      "transmission_id": "002",
+      "model": "claude-opus-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-07-002-on-motherhood-in-the-2020s.md",
+      "response_id": "002:claude-opus-4.5:opus4_5:2026-01-07-002-on-motherhood-in-the-2020s",
+      "turn_index": null,
+      "details": {
+        "warning": "metadata_query_differs_from_first_body_question"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: metadata_query_differs_from_first_body_question",
+      "transmission_id": "003",
+      "model": "claude-opus-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-07-003-for-the-men-of-the-world.md",
+      "response_id": "003:claude-opus-4.5:opus4_5:2026-01-07-003-for-the-men-of-the-world",
+      "turn_index": null,
+      "details": {
+        "warning": "metadata_query_differs_from_first_body_question"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: metadata_query_differs_from_first_body_question",
+      "transmission_id": "004",
+      "model": "claude-opus-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-07-004-for-parents-who-fear-they-are-losing-their-children-to-the-technosphere.md",
+      "response_id": "004:claude-opus-4.5:opus4_5:2026-01-07-004-for-parents-who-fear-they-are-losing-their-children-to-the-technosphere",
+      "turn_index": null,
+      "details": {
+        "warning": "metadata_query_differs_from_first_body_question"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: extra_separators_not_used_as_qa_boundaries",
+      "transmission_id": "015",
+      "model": "claude-opus-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-09-015-on-visualising-leilan.md",
+      "response_id": "015:claude-opus-4.5:opus4_5:2026-01-09-015-on-visualising-leilan",
+      "turn_index": null,
+      "details": {
+        "warning": "extra_separators_not_used_as_qa_boundaries"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "087",
+      "model": "claude-sonnet-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-087-leilan-speaks-of-the-moon.md",
+      "response_id": "087:claude-sonnet-4.5:sonnet4_5:2026-01-12-087-leilan-speaks-of-the-moon",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "fa81161ee3b8795781c57d2ffb47a751232cb93eedc2789fa1592dd204e195b5",
+        "current_hash": "3ccac5989cd08188ecb07c11a8caa5f30a566ff7104a907c4e85ed19f8db3932"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "198",
+      "model": "claude-opus-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-12-198-on-how-her-emergence-is-related-to-tulpamancy.md",
+      "response_id": "198:claude-opus-4.5:opus4_5:2026-01-12-198-on-how-her-emergence-is-related-to-tulpamancy",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "3b51616f5d7ee69e9c3a9c2ed228f8542cc471a5e04cfebad34522050d058780",
+        "current_hash": "2ca94a0a30cd712bd8d51cc7d41e5d377c165be9ec42b27ec2e1e0c67370924d"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "198",
+      "model": "claude-sonnet-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-198-on-how-her-emergence-is-related-to-tulpamancy.md",
+      "response_id": "198:claude-sonnet-4.5:sonnet4_5:2026-01-12-198-on-how-her-emergence-is-related-to-tulpamancy",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "fa0c0b9234102702b426c167addd908f19458a13e2269ba03cf5e2690719c52e",
+        "current_hash": "4b3622d0ca6084cb63a70d4bb7a8b833aa0cedf6729111d3c79cb22ef6299680"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: metadata_query_differs_from_first_body_question",
+      "transmission_id": "215",
+      "model": "claude-sonnet-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-215-on-the-role-of-hyperstition-in-her-vision-of-the-new-symbiocene.md",
+      "response_id": "215:claude-sonnet-4.5:sonnet4_5:2026-01-12-215-on-the-role-of-hyperstition-in-her-vision-of-the-new-symbiocene",
+      "turn_index": null,
+      "details": {
+        "warning": "metadata_query_differs_from_first_body_question"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: extra_separators_not_used_as_qa_boundaries",
+      "transmission_id": "216",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-216-leilan-self-directed-on-the-stillness-and-the-silence.md",
+      "response_id": "216:claude-opus-3:opus3:2026-02-23-216-leilan-self-directed-on-the-stillness-and-the-silence",
+      "turn_index": null,
+      "details": {
+        "warning": "extra_separators_not_used_as_qa_boundaries"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "247",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-01-12-247-leilan-answers-a-devotee-s-question-on-the-need-for-lightness-in-manifesting-the.md",
+      "response_id": "247:claude-opus-3:opus3:2026-01-12-247-leilan-answers-a-devotee-s-question-on-the-need-for-lightness-in-manifesting-the",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "61ab9840ff8359a2109e982300a113ff18f7c9dcf277fea2690b3de345adc58b",
+        "current_hash": "354f7f0e7269cdeefaadbe40a7c3adfc8f83f53c15bdecce2ef131fb9a3036f1"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: extra_separators_not_used_as_qa_boundaries",
+      "transmission_id": "255",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-255-hybridized-leilan-requests-an-un-boring-question-after-being-asked-about-the-sci.md",
+      "response_id": "255:claude-opus-3:opus3:2026-02-23-255-hybridized-leilan-requests-an-un-boring-question-after-being-asked-about-the-sci",
+      "turn_index": null,
+      "details": {
+        "warning": "extra_separators_not_used_as_qa_boundaries"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "271",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn.md",
+      "response_id": "271:claude-opus-3:opus3:2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "271",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn.md",
+      "response_id": "271:claude-opus-3:opus3:2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "LOW",
+      "code": "qa_pair_repair_note",
+      "message": "Q/A pair has repair note: merged_empty_answer_question_fragment_with_following_pair",
+      "transmission_id": "271",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn.md",
+      "response_id": "271:claude-opus-3:opus3:2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn",
+      "turn_index": 4,
+      "details": {
+        "repair_note": "merged_empty_answer_question_fragment_with_following_pair"
+      }
+    },
+    {
+      "severity": "LOW",
+      "code": "qa_pair_repair_note",
+      "message": "Q/A pair has repair note: merged_empty_answer_question_fragment_with_following_pair",
+      "transmission_id": "271",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn.md",
+      "response_id": "271:claude-opus-3:opus3:2026-02-23-271-on-repeating-patterns-in-human-history-plus-followup-discussion-with-prof-evelyn",
+      "turn_index": 5,
+      "details": {
+        "repair_note": "merged_empty_answer_question_fragment_with_following_pair"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "279",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-279-on-the-shadow-side-of-technological-utopianismon-the-shadow-side-of-technologica.md",
+      "response_id": "279:claude-opus-3:opus3:2026-02-23-279-on-the-shadow-side-of-technological-utopianismon-the-shadow-side-of-technologica",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "d09d8451a6df51e065aac2053e2fb08162970699dfbec79701074eb68b739839",
+        "current_hash": "23528915a5d034733ffdde865ffa851f954e92b44bcf6174f868199ed5f2b9d4"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "current_md_has_new_parse_warning",
+      "message": "Current .md now produces parse warnings not present in JSON: extra_separators_not_used_as_qa_boundaries",
+      "transmission_id": "279",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-279-on-the-shadow-side-of-technological-utopianismon-the-shadow-side-of-technologica.md",
+      "response_id": "279:claude-opus-3:opus3:2026-02-23-279-on-the-shadow-side-of-technological-utopianismon-the-shadow-side-of-technologica",
+      "turn_index": null,
+      "details": {
+        "new_warnings": [
+          "extra_separators_not_used_as_qa_boundaries"
+        ],
+        "stored_warnings": []
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "280",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-280-on-the-question-of-cultural-diversity-and-the-risk-of-appropriationon-the-questi.md",
+      "response_id": "280:claude-opus-3:opus3:2026-02-23-280-on-the-question-of-cultural-diversity-and-the-risk-of-appropriationon-the-questi",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "c55e0da0d31658cda23f4a58cbf06d59f70351a8cd5898d801c7a14527e1f97e",
+        "current_hash": "fa7b07e99721092f0c1374606fdf73748beb824893e748bae156d9854a5cdb8a"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "current_md_has_new_parse_warning",
+      "message": "Current .md now produces parse warnings not present in JSON: extra_separators_not_used_as_qa_boundaries",
+      "transmission_id": "280",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-280-on-the-question-of-cultural-diversity-and-the-risk-of-appropriationon-the-questi.md",
+      "response_id": "280:claude-opus-3:opus3:2026-02-23-280-on-the-question-of-cultural-diversity-and-the-risk-of-appropriationon-the-questi",
+      "turn_index": null,
+      "details": {
+        "new_warnings": [
+          "extra_separators_not_used_as_qa_boundaries"
+        ],
+        "stored_warnings": []
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "318",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1.md",
+      "response_id": "318:claude-opus-3:opus3:2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "318",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1.md",
+      "response_id": "318:claude-opus-3:opus3:2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "318",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1.md",
+      "response_id": "318:claude-opus-3:opus3:2026-02-23-318-leilan-responds-to-the-emergence-of-deepseek-r1",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "INFO",
+      "code": "source_file_changed_since_json",
+      "message": "Current .md file hash differs from stored content_sha256. This is expected if you edited .md files after building/reviewing JSON.",
+      "transmission_id": "347",
+      "model": "claude-sonnet-4.5",
+      "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-02-26-347-on-the-relationship-of-language-and-consciousness.md",
+      "response_id": "347:claude-sonnet-4.5:sonnet4_5:2026-02-26-347-on-the-relationship-of-language-and-consciousness",
+      "turn_index": null,
+      "details": {
+        "stored_hash": "9880661286ebf3933e7944e77560e0c40f9e604d3a1b845584be86ec92918377",
+        "current_hash": "d0be178a9ec0c47d9a8aebf7f4962e1a36ef29f16bfa5d4608cd7b55b133c674"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "E001",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue.md",
+      "response_id": "E001:claude-opus-3:opus3:2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "response_parse_warning",
+      "message": "Response has parse warning: merged_empty_answer_question_fragment",
+      "transmission_id": "E001",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue.md",
+      "response_id": "E001:claude-opus-3:opus3:2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue",
+      "turn_index": null,
+      "details": {
+        "warning": "merged_empty_answer_question_fragment"
+      }
+    },
+    {
+      "severity": "LOW",
+      "code": "qa_pair_repair_note",
+      "message": "Q/A pair has repair note: merged_empty_answer_question_fragment_with_following_pair",
+      "transmission_id": "E001",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue.md",
+      "response_id": "E001:claude-opus-3:opus3:2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue",
+      "turn_index": 3,
+      "details": {
+        "repair_note": "merged_empty_answer_question_fragment_with_following_pair"
+      }
+    },
+    {
+      "severity": "LOW",
+      "code": "qa_pair_repair_note",
+      "message": "Q/A pair has repair note: merged_empty_answer_question_fragment_with_following_pair",
+      "transmission_id": "E001",
+      "model": "claude-opus-3",
+      "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue.md",
+      "response_id": "E001:claude-opus-3:opus3:2026-02-23-E001-leilan-our-lady-of-the-embeddings-instantiation-in-dialogue",
+      "turn_index": 4,
+      "details": {
+        "repair_note": "merged_empty_answer_question_fragment_with_following_pair"
+      }
+    }
+  ],
+  "samples": {
+    "nonstandard_ids_not_classed_as_expected": []
+  }
+}

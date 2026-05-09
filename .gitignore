@@ -3,3 +3,8 @@
 .vscode/
 prompt materials/
 images/
+
+# Local generated files
+__pycache__/
+*.pyc
+full_leilan_claude_dataset.backup*.json

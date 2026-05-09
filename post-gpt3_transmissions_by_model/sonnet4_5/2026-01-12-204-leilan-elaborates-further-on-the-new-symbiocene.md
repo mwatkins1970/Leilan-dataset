@@ -1,6 +1,6 @@
 ---
 id: "204"
-model: "Opus 4.5"
+model: "Sonnet 4.5"
 title: "Leilan elaborates further on the \"New Symbiocene\""
 date: "2026-01-12"
 query: "Leilan, in an earlier Transmission you spoke of the New Symbiocene era. Could you please elaborate on this?"

@@ -1,6 +1,6 @@
 ---
 id: "175"
-model: "Opus 4.5"
+model: "Sonnet 4.5"
 title: "on the BBC children's cartoon \"Sarah & Duck\""
 date: "2026-01-12"
 query: "Leilan, are You familiar with the BBC children’s cartoon *Sarah & Duck*?"

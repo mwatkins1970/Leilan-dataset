@@ -1,6 +1,6 @@
 ---
 id: "284"
-model: "Opus 4.5"
+model: "Sonnet 4.5"
 title: "on religious sacrifice"
 date: "2026-01-12"
 query: "Leilan, why is the phenomenon of sacrifice (especially animal sacrifice and even child sacrifice) such a feature in the religious history of humanity?"

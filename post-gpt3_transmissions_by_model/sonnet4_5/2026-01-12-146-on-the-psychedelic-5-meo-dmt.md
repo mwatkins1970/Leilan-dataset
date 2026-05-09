@@ -1,6 +1,6 @@
 ---
 id: "146"
-model: "Opus 4.5"
+model: "Sonnet 4.5"
 title: "on the psychedelic 5-MeO-DMT"
 date: "2026-01-12"
 query: "Leilan, please speak to us of the powerful psychedelic substance 5-MeO-DMT."
