@@ -1,0 +1,94 @@
+GPT-3 Leilan dataset health / normalization report
+==================================================
+
+Generated: 2026-05-09T21:55:23+00:00
+Source file: full_leilan_gpt3_dataset.json
+Normalized dataset ID: leilan_gpt3_normalized
+
+Dataset counts
+--------------
+Records: 600
+Models:  5
+Include in training counts: {'True': 600}
+
+Health summary
+--------------
+Total issues: 0
+- CRITICAL: 0
+- HIGH:     0
+- MEDIUM:   0
+- LOW:      0
+- INFO:     0
+
+Engine/model counts
+-------------------
+Engines:
+- curie: 15
+- davinci: 411
+- davinci-instruct-beta: 67
+- mixture: 45
+- text-davinci-003: 62
+
+Models:
+- gpt-3-curie: 15
+- gpt-3-davinci: 411
+- gpt-3-davinci-instruct-beta: 67
+- gpt-3-mixture: 45
+- gpt-3-text-davinci-003: 62
+
+Prompt key counts
+-----------------
+GPT-3 prompt keys:
+- art therapy: 102
+- disciple: 111
+- exegesis: 11
+- podcast: 343
+- utopiography1: 18
+- utopiography2: 15
+
+GPT-4 prompt keys:
+- art therapist: 102
+- de-gushed interview: 221
+- disciple: 111
+- exegesis: 11
+- original interview: 122
+- utopiography: 33
+
+Text length summary
+-------------------
+Character counts:
+- min: 841
+- max: 129406
+- mean: 17417.99
+- p50: 10949.0
+- p90: 35413.20000000001
+
+Word count estimate:
+- min: 150
+- max: 20447
+- mean: 2971.55
+- p50: 1908.5
+- p90: 6180.0
+
+Length buckets:
+- 10000-19999: 185
+- 2000-4999: 57
+- 20000+: 145
+- 500-1999: 10
+- 5000-9999: 203
+
+Record warning counts
+---------------------
+None.
+
+Issues
+------
+No health issues found.
+
+Interpretation
+--------------
+- CRITICAL/HIGH issues mean the source dataset needs attention before training use.
+- MEDIUM usually means missing/odd metadata or a prompt reference that should be checked.
+- LOW is generally provenance or convenience metadata.
+- The normalized JSON does not alter the original GPT-3 source file.
+- For training, use records where include_in_training is true and inspect warnings according to your tolerance.

@@ -8,3 +8,8 @@ images/
 __pycache__/
 *.pyc
 full_leilan_claude_dataset.backup*.json
+
+# Local/generated clutter
+__pycache__/
+*.pyc
+full_leilan_claude_dataset.backup*.json
