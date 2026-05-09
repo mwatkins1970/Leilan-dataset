@@ -1,15 +1,27 @@
+# macOS
 .DS_Store
-.claude/
-.vscode/
-prompt materials/
-images/
 
-# Local generated files
+# Python
 __pycache__/
-*.pyc
-full_leilan_claude_dataset.backup*.json
+*.py[cod]
+*$py.class
 
-# Local/generated clutter
-__pycache__/
-*.pyc
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local dataset backups and generated scratch files
 full_leilan_claude_dataset.backup*.json
+full_leilan_gpt3_dataset.backup*.json
+*.backup*.json
+
+# Local one-off reports / temporary audit outputs
+*_health_report.json
+*_health_report.txt
+*_build_report.json
+*_report.json
+
+# Local editor files
+*.swp
+*.swo
