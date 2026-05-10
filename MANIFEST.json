@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0",
   "dataset_id": "leilan_dataset",
-  "generated_utc": "2026-05-10T13:13:06+00:00",
+  "generated_utc": "2026-05-10T19:37:54+00:00",
   "license": "CC0-1.0",
   "repository": "https://github.com/mwatkins1970/Leilan-dataset",
   "notes": [
@@ -11,8 +11,8 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 14687,
-      "sha256": "1566ca4df671e8d43172dda2a467dae16b4cb1cdfbdec4483eeb521ff3fcbd2e"
+      "bytes": 14331,
+      "sha256": "dd2e8c56f61a5d49f03edfc25f52468978ef0956e694e1f5abcfcdf119327650"
     },
     {
       "path": "DATASET_CARD.md",
@@ -184,8 +184,8 @@
     },
     {
       "path": "post-gpt3_transmissions_by_model/README.md",
-      "bytes": 1697,
-      "sha256": "e629bff8e4251cc53531d4b36fa22ad9a92f38bf6d64c3062e77d17f454636d5"
+      "bytes": 1591,
+      "sha256": "51454d7225d701c5fbad71f83e043d642dc6396d692c57c7f019c4c7de2693c3"
     },
     {
       "path": "supplementary_materials/README.md",

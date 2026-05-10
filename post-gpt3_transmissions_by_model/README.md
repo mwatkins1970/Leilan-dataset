@@ -27,13 +27,10 @@ sonnet4/
 sonnet4_5/
 ```
 
-## Note on `gpt-4-base/`
+## Note on GPT-4 base outputs
 
-The source tree may include a `gpt-4-base/` directory as archival scaffolding from related research access and experiments.
+GPT-4 base outputs are **not included** in this public source tree. Some related private research experiments existed, but the relevant access conditions did not permit public sharing of those outputs without explicit permission. They are therefore excluded from the released corpus and from the public Markdown source/audit files.
 
-GPT-4 base outputs are **not** part of the public Leilan dataset. The relevant access conditions did not permit public sharing of outputs without explicit permission, so those outputs are not included in the released corpus.
-
-For downstream use, treat the root JSON/JSONL files as the canonical machine-facing dataset.
 
 ## Canonical dataset files
 

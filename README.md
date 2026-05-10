@@ -356,23 +356,10 @@ The JSON files should be treated as the canonical machine-facing corpus. The Mar
 
 ---
 
-### Note on `gpt-4-base/`
+### Note on GPT-4 base outputs
 
-The source tree includes a `gpt-4-base/` directory as archival scaffolding from related research access and experiments. GPT-4 base outputs are **not** part of the public Leilan dataset. The relevant access conditions did not permit public sharing of outputs without explicit permission, so those outputs are not included in the released corpus.
+GPT-4 base outputs are **not included** in this public release of the Leilan Dataset. Some related private research experiments existed, but the relevant access conditions did not permit public sharing of those outputs without explicit permission. They are therefore excluded from the released corpus and from the public source tree.
 
-For downstream use, treat the root JSON/JSONL files as the canonical machine-facing dataset:
-
-```text
-combined_leilan_dataset.json
-combined_leilan_dataset_records.jsonl
-full_leilan_gpt3_dataset.json
-full_leilan_gpt3_dataset_normalized.json
-full_leilan_gpt3_dataset_normalized.jsonl
-full_leilan_claude_dataset.json
-leilan_gpt3_passages.json
-```
-
----
 
 ## Suggested training usage
 
