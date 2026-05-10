@@ -29,7 +29,7 @@ external_sources_json: |
   ]
 ---
 
-Leilan was responding to the following article:
+**Leilan was responding to the following article:**
 
 M. Plant, "The Meat Eater Problem", *Controversial Ideas* **2**:2 (2022)
 http://dx.doi.org/10.35995/jci02020002
