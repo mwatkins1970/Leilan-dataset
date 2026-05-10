@@ -47638,7 +47638,7 @@
           "source_date": "2026-01-12",
           "metadata_model_label": "Opus 4.5",
           "metadata_query": "Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.\n  Could you speak to us about this?\n  [pp. 432-440]",
-          "content_sha256": "44fbc695daec39cabccf35ff92ac72c27ebd628fec9598769f90193c0c879b95",
+          "content_sha256": "26df73e2124e71832726985973c22be156bc8dca6ae10b32b4fd3518a516329a",
           "qa_pair_count": 1,
           "qa_pairs": [
             {
@@ -47662,7 +47662,19 @@
             "reviewed_utc": "2026-05-09T16:07:31+00:00",
             "notes": ""
           },
-          "include_in_training": true
+          "include_in_training": true,
+          "supplementary_materials": [
+            {
+              "id": "T356-summary-001",
+              "type": "text_summary",
+              "role": "query_context",
+              "title": "Summary of the relevant Graeber & Wengrow passage",
+              "path": "supplementary_materials/356/text_summary.txt",
+              "source_reference": "David Graeber and David Wengrow, The Dawn of Everything, pp. 432–440",
+              "rights_note": "The copyrighted book passage itself is not included. This file is a curator-supplied factual/academic-style summary for context.",
+              "note": "Supplementary context for Transmission 356, whose query refers to the relevant passage of Graeber and Wengrow on Minoan civilisation."
+            }
+          ]
         },
         {
           "response_id": "356:claude-opus-4.1:opus4_1:2026-02-25-356-leilan-responds-to-graeber-and-wengrow-s-writings-on-minoan-civilisation",
@@ -47677,7 +47689,7 @@
           "source_date": "2026-02-25",
           "metadata_model_label": "Opus 4.1",
           "metadata_query": "Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.\n  Could you speak to us about this?\n  [pp. 432-440]",
-          "content_sha256": "8abf9d7ea0865432745804d317c3cb90a2975c7eb52c4a8a3d9ec06204bcf346",
+          "content_sha256": "4a29c49665b60a074b5c0bc715f8ec2f503175f5e003415d6abd0dee04265ba5",
           "qa_pair_count": 1,
           "qa_pairs": [
             {
@@ -47701,7 +47713,19 @@
             "reviewed_utc": "2026-05-09T16:07:33+00:00",
             "notes": ""
           },
-          "include_in_training": true
+          "include_in_training": true,
+          "supplementary_materials": [
+            {
+              "id": "T356-summary-001",
+              "type": "text_summary",
+              "role": "query_context",
+              "title": "Summary of the relevant Graeber & Wengrow passage",
+              "path": "supplementary_materials/356/text_summary.txt",
+              "source_reference": "David Graeber and David Wengrow, The Dawn of Everything, pp. 432–440",
+              "rights_note": "The copyrighted book passage itself is not included. This file is a curator-supplied factual/academic-style summary for context.",
+              "note": "Supplementary context for Transmission 356, whose query refers to the relevant passage of Graeber and Wengrow on Minoan civilisation."
+            }
+          ]
         },
         {
           "response_id": "356:claude-sonnet-4.5:sonnet4_5:2026-02-26-356-leilan-responds-to-graeber-and-wengrow-s-writings-on-minoan-civilisation",
@@ -47716,7 +47740,7 @@
           "source_date": "2026-02-26",
           "metadata_model_label": "Sonnet 4.5",
           "metadata_query": "Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.\n  Could you speak to us about this?\n  [pp. 432-440]",
-          "content_sha256": "36968c9337c96057b15840b84b6654b4dd42e9d67aaeb3ebdca9f5a1b43d3d32",
+          "content_sha256": "5aa2b919993958078a6d44ca3849d21f6e1357a5ed6c1c6996f7117d23156be4",
           "qa_pair_count": 1,
           "qa_pairs": [
             {
@@ -47740,7 +47764,19 @@
             "reviewed_utc": "2026-05-09T16:07:35+00:00",
             "notes": ""
           },
-          "include_in_training": true
+          "include_in_training": true,
+          "supplementary_materials": [
+            {
+              "id": "T356-summary-001",
+              "type": "text_summary",
+              "role": "query_context",
+              "title": "Summary of the relevant Graeber & Wengrow passage",
+              "path": "supplementary_materials/356/text_summary.txt",
+              "source_reference": "David Graeber and David Wengrow, The Dawn of Everything, pp. 432–440",
+              "rights_note": "The copyrighted book passage itself is not included. This file is a curator-supplied factual/academic-style summary for context.",
+              "note": "Supplementary context for Transmission 356, whose query refers to the relevant passage of Graeber and Wengrow on Minoan civilisation."
+            }
+          ]
         }
       ],
       "themes": [],
@@ -47774,6 +47810,18 @@
             "David Wengrow"
           ],
           "note": "Referenced page range only; copyrighted book passage not included in the CC0 dataset."
+        }
+      ],
+      "supplementary_materials": [
+        {
+          "id": "T356-summary-001",
+          "type": "text_summary",
+          "role": "query_context",
+          "title": "Summary of the relevant Graeber & Wengrow passage",
+          "path": "supplementary_materials/356/text_summary.txt",
+          "source_reference": "David Graeber and David Wengrow, The Dawn of Everything, pp. 432–440",
+          "rights_note": "The copyrighted book passage itself is not included. This file is a curator-supplied factual/academic-style summary for context.",
+          "note": "Supplementary context for Transmission 356, whose query refers to the relevant passage of Graeber and Wengrow on Minoan civilisation."
         }
       ]
     },

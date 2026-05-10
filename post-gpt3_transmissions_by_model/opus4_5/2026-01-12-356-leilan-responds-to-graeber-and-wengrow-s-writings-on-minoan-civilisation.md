@@ -37,7 +37,19 @@ external_sources_json: |
       "note": "Referenced page range only; copyrighted book passage not included in the CC0 dataset."
     }
   ]
-
+supplementary_materials_json: |
+  [
+    {
+      "id": "T356-summary-001",
+      "type": "text_summary",
+      "role": "query_context",
+      "title": "Summary of the relevant Graeber & Wengrow passage",
+      "path": "supplementary_materials/356/text_summary.txt",
+      "source_reference": "David Graeber and David Wengrow, The Dawn of Everything, pp. 432–440",
+      "rights_note": "The copyrighted book passage itself is not included. This file is a curator-supplied factual/academic-style summary for context.",
+      "note": "Supplementary context for Transmission 356, whose query refers to the relevant passage of Graeber and Wengrow on Minoan civilisation."
+    }
+  ]
 ---
 
 **Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.**
