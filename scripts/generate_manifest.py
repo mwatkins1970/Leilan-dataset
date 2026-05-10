@@ -1,32 +1,27 @@
 #!/usr/bin/env python3
 """
-generate_manifest.py
+Generate MANIFEST.json for the Leilan Dataset.
 
-Generate MANIFEST.json for the Leilan Dataset repository.
+This expanded manifest covers:
+- canonical machine-facing files;
+- Markdown source/audit files under post-gpt3_transmissions_by_model/;
+- supplementary material files under supplementary_materials/;
+- tracked Python scripts.
 
-Run from the repository root:
-
+Run from repo root:
     python3 scripts/generate_manifest.py
-
-This script computes file sizes, SHA256 hashes, JSON/JSONL counts, and
-dataset-specific summary counts for the public dataset files.
 """
 
 from __future__ import annotations
 
-import hashlib
-import json
-import os
-import tempfile
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+import hashlib
+import json
+import subprocess
 from typing import Any, Dict, Iterable, List
 
-
-DATASET_ID = "leilan_dataset"
-MANIFEST_VERSION = "1.0"
-OUTPUT_PATH = Path("MANIFEST.json")
 
 CORE_FILES = [
     "README.md",
@@ -44,314 +39,229 @@ CORE_FILES = [
     "legacy-gpt3-scripts/README.md",
 ]
 
+EXCLUDE_DIRS = {".git", "__pycache__", ".venv", "venv", "env"}
+EXCLUDE_NAME_PARTS = (".backup-", ".tmp", ".pyc")
 
-def now_utc_iso() -> str:
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+def should_include(path: Path) -> bool:
+    if any(part in EXCLUDE_DIRS for part in path.parts):
+        return False
+    if path.name.startswith(".DS_Store"):
+        return False
+    if any(part in path.name for part in EXCLUDE_NAME_PARTS):
+        return False
+    return path.is_file()
 
 
-def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
+def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
-        while True:
-            chunk = f.read(chunk_size)
-            if not chunk:
-                break
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
 
 
-def load_json(path: Path) -> Any:
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def load_jsonl(path: Path) -> List[Any]:
-    records = []
-    with path.open("r", encoding="utf-8") as f:
-        for line_number, line in enumerate(f, start=1):
-            stripped = line.strip()
-            if not stripped:
-                continue
-            try:
-                records.append(json.loads(stripped))
-            except json.JSONDecodeError as e:
-                raise ValueError(f"{path}: invalid JSON on line {line_number}: {e}") from e
-    return records
-
-
-def write_json_atomic(path: Path, data: Any) -> None:
-    path = path.resolve()
-    fd, tmp_name = tempfile.mkstemp(
-        prefix=path.name + ".",
-        suffix=".tmp",
-        dir=str(path.parent),
-        text=True,
-    )
-    try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-            f.write("\n")
-        os.replace(tmp_name, path)
-    except Exception:
-        try:
-            os.unlink(tmp_name)
-        except OSError:
-            pass
-        raise
-
-
-def basic_file_entry(path: Path) -> Dict[str, Any]:
+def file_entry(path: str | Path, category: str) -> Dict[str, Any]:
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(str(p))
     return {
-        "path": path.as_posix(),
-        "bytes": path.stat().st_size,
-        "sha256": sha256_file(path),
+        "path": p.as_posix(),
+        "category": category,
+        "bytes": p.stat().st_size,
+        "sha256": sha256_file(p),
     }
 
 
-def summarize_combined(path: Path) -> Dict[str, Any]:
-    data = load_json(path)
-    records = data.get("records", [])
-    if not isinstance(records, list):
-        records = []
+def load_json(path: str | Path) -> Any:
+    with Path(path).open("r", encoding="utf-8") as f:
+        return json.load(f)
 
-    record_type_counts = Counter(str(r.get("record_type", "")) for r in records if isinstance(r, dict))
-    source_dataset_counts = Counter(str(r.get("source_dataset", "")) for r in records if isinstance(r, dict))
-    model_counts = Counter(str(r.get("model", "")) for r in records if isinstance(r, dict))
-    include_counts = Counter(str(r.get("include_in_training", True)) for r in records if isinstance(r, dict))
 
-    claude_qa_pair_count = 0
-    gpt3_nonempty_text_count = 0
-    unique_record_ids = set()
-
-    for record in records:
-        if not isinstance(record, dict):
+def collect_source_markdown_files() -> List[str]:
+    root = Path("post-gpt3_transmissions_by_model")
+    if not root.exists():
+        return []
+    files = []
+    for p in root.rglob("*.md"):
+        if p.name == "README.md":
             continue
-        rid = record.get("record_id")
-        if rid is not None:
-            unique_record_ids.add(str(rid))
-        if record.get("record_type") == "claude_qa_response":
-            qa_pairs = record.get("qa_pairs", [])
-            if isinstance(qa_pairs, list):
-                claude_qa_pair_count += len(qa_pairs)
-        if record.get("record_type") == "gpt3_transcript" and str(record.get("text", "")).strip():
-            gpt3_nonempty_text_count += 1
+        if should_include(p):
+            files.append(p.as_posix())
+    return sorted(files)
 
+
+def collect_supplementary_material_files() -> List[str]:
+    root = Path("supplementary_materials")
+    if not root.exists():
+        return []
+    files = []
+    for p in root.rglob("*"):
+        if p.name == "README.md":
+            continue
+        if should_include(p):
+            files.append(p.as_posix())
+    return sorted(files)
+
+
+def git_ls_files(patterns: Iterable[str]) -> List[str]:
+    try:
+        out = subprocess.check_output(["git", "ls-files", *patterns], text=True).splitlines()
+    except Exception:
+        return []
+    return sorted(p for p in out if p and Path(p).exists() and should_include(Path(p)))
+
+
+def collect_script_files() -> List[str]:
+    files = git_ls_files(["*.py", "scripts/*.py", "legacy-gpt3-scripts/*.py"])
+    return sorted({p for p in files if p.endswith(".py")})
+
+
+def combined_counts() -> Dict[str, Any]:
+    data = load_json("combined_leilan_dataset.json")
+    records = data.get("records", [])
+    record_type_counts = Counter(r.get("record_type") for r in records)
+    source_dataset_counts = Counter(r.get("source_dataset") for r in records)
+    model_counts = Counter(r.get("model") for r in records if r.get("model"))
+    claude_qa_pair_count = sum(
+        len(r.get("qa_pairs", []))
+        for r in records
+        if r.get("record_type") == "claude_qa_response" and isinstance(r.get("qa_pairs"), list)
+    )
     return {
-        "json_type": "combined_corpus",
-        "schema_version": data.get("schema_version"),
-        "corpus_id": data.get("corpus_id"),
         "record_count": len(records),
-        "unique_record_id_count": len(unique_record_ids),
         "record_type_counts": dict(sorted(record_type_counts.items())),
         "source_dataset_counts": dict(sorted(source_dataset_counts.items())),
         "model_count": len(model_counts),
         "model_counts": dict(sorted(model_counts.items())),
-        "include_in_training_counts": dict(sorted(include_counts.items())),
-        "gpt3_transcript_count": record_type_counts.get("gpt3_transcript", 0),
-        "gpt3_nonempty_text_record_count": gpt3_nonempty_text_count,
-        "claude_response_count": record_type_counts.get("claude_qa_response", 0),
         "claude_qa_pair_count": claude_qa_pair_count,
+        "gpt3_transcript_count": record_type_counts.get("gpt3_transcript", 0),
+        "claude_response_record_count": record_type_counts.get("claude_qa_response", 0),
     }
 
 
-def summarize_combined_jsonl(path: Path) -> Dict[str, Any]:
-    records = load_jsonl(path)
-    record_type_counts = Counter(str(r.get("record_type", "")) for r in records if isinstance(r, dict))
-    return {
-        "json_type": "combined_records_jsonl",
-        "line_count": len(records),
-        "record_type_counts": dict(sorted(record_type_counts.items())),
-    }
+def gpt3_normalized_counts() -> Dict[str, Any]:
+    data = load_json("full_leilan_gpt3_dataset_normalized.json")
+    records = data.get("records", data if isinstance(data, list) else [])
+    return {"record_count": len(records)}
 
 
-def summarize_gpt3_raw(path: Path) -> Dict[str, Any]:
-    data = load_json(path)
-    transcripts = data.get("transcripts", [])
-    prompts = data.get("prompts", {})
-
-    engines = Counter()
-    prompt_keys = Counter()
-    temperatures = Counter()
-
-    if isinstance(transcripts, list):
-        for item in transcripts:
-            if not isinstance(item, dict):
-                continue
-            engines[str(item.get("engine", ""))] += 1
-            prompt_keys[str(item.get("GPT3 prompt", ""))] += 1
-            temperatures[str(item.get("temperature", ""))] += 1
-
-    return {
-        "json_type": "gpt3_raw",
-        "transcript_count": len(transcripts) if isinstance(transcripts, list) else None,
-        "prompt_library_keys": list(prompts.keys()) if isinstance(prompts, dict) else None,
-        "engine_counts": dict(sorted(engines.items())),
-        "gpt3_prompt_key_counts": dict(sorted(prompt_keys.items())),
-        "temperature_counts": dict(sorted(temperatures.items())),
-    }
-
-
-def summarize_gpt3_normalized(path: Path) -> Dict[str, Any]:
-    data = load_json(path)
-    records = data.get("records", [])
-    if not isinstance(records, list):
-        records = []
-
-    record_type_counts = Counter(str(r.get("record_type", "")) for r in records if isinstance(r, dict))
-    model_counts = Counter(str(r.get("model", "")) for r in records if isinstance(r, dict))
-    include_counts = Counter(str(r.get("include_in_training", True)) for r in records if isinstance(r, dict))
-    warning_counts = Counter(w for r in records if isinstance(r, dict) for w in r.get("warnings", []))
-
-    return {
-        "json_type": "gpt3_normalized",
-        "schema_version": data.get("schema_version"),
-        "dataset_id": data.get("dataset_id"),
-        "record_count": len(records),
-        "record_type_counts": dict(sorted(record_type_counts.items())),
-        "model_counts": dict(sorted(model_counts.items())),
-        "include_in_training_counts": dict(sorted(include_counts.items())),
-        "record_warning_counts": dict(sorted(warning_counts.items())),
-        "nonempty_text_record_count": sum(
-            1 for r in records
-            if isinstance(r, dict) and str(r.get("text", "")).strip()
-        ),
-    }
-
-
-def summarize_gpt3_normalized_jsonl(path: Path) -> Dict[str, Any]:
-    records = load_jsonl(path)
-    return {
-        "json_type": "gpt3_normalized_jsonl",
-        "line_count": len(records),
-    }
-
-
-def summarize_claude(path: Path) -> Dict[str, Any]:
-    data = load_json(path)
+def claude_counts() -> Dict[str, Any]:
+    data = load_json("full_leilan_claude_dataset.json")
     transmissions = data.get("transmissions", [])
-    if not isinstance(transmissions, list):
-        transmissions = []
-
     response_count = 0
     qa_pair_count = 0
     model_counts = Counter()
-    include_counts = Counter()
-    transmission_ids = set()
-    response_ids = set()
-
-    for transmission in transmissions:
-        if not isinstance(transmission, dict):
-            continue
-        tid = transmission.get("transmission_id")
-        if tid is not None:
-            transmission_ids.add(str(tid))
-        responses = transmission.get("responses", [])
+    for t in transmissions:
+        responses = t.get("responses", [])
         if not isinstance(responses, list):
             continue
-        for response in responses:
-            if not isinstance(response, dict):
-                continue
-            response_count += 1
-            rid = response.get("response_id")
-            if rid is not None:
-                response_ids.add(str(rid))
-            model_counts[str(response.get("model", ""))] += 1
-            include_counts[str(response.get("include_in_training", True))] += 1
-            qa_pairs = response.get("qa_pairs", [])
+        response_count += len(responses)
+        for r in responses:
+            if r.get("model"):
+                model_counts[r.get("model")] += 1
+            qa_pairs = r.get("qa_pairs", [])
             if isinstance(qa_pairs, list):
                 qa_pair_count += len(qa_pairs)
-
     return {
-        "json_type": "claude_family",
         "transmission_count": len(transmissions),
-        "unique_transmission_id_count": len(transmission_ids),
         "response_count": response_count,
-        "unique_response_id_count": len(response_ids),
         "qa_pair_count": qa_pair_count,
         "model_counts": dict(sorted(model_counts.items())),
-        "include_in_training_counts": dict(sorted(include_counts.items())),
     }
 
 
-def summarize_passages(path: Path) -> Dict[str, Any]:
-    data = load_json(path)
-    if not isinstance(data, list):
-        data = []
+def passage_counts() -> Dict[str, Any]:
+    data = load_json("leilan_gpt3_passages.json")
+    if isinstance(data, list):
+        passages = data
+    elif isinstance(data, dict):
+        passages = data.get("passages", data.get("records", []))
+    else:
+        passages = []
+    return {"passage_count": len(passages)}
 
-    ids = [item.get("id") for item in data if isinstance(item, dict)]
-    model_counts = Counter(str(item.get("model", "")) for item in data if isinstance(item, dict))
-    nonempty_text_count = sum(
-        1 for item in data
-        if isinstance(item, dict) and str(item.get("text", "")).strip()
-    )
 
+def source_tree_counts(source_files: List[str], supplementary_files: List[str], script_files: List[str]) -> Dict[str, Any]:
+    by_model_dir = Counter(Path(p).parts[1] for p in source_files if len(Path(p).parts) >= 2)
+    by_supp_dir = Counter(Path(p).parts[1] for p in supplementary_files if len(Path(p).parts) >= 2)
     return {
-        "json_type": "gpt3_passages",
-        "passage_count": len(data),
-        "unique_id_count": len(set(ids)),
-        "min_id": min(ids) if ids and all(isinstance(i, int) for i in ids) else None,
-        "max_id": max(ids) if ids and all(isinstance(i, int) for i in ids) else None,
-        "nonempty_text_count": nonempty_text_count,
-        "model_counts": dict(sorted(model_counts.items())),
+        "source_markdown_file_count": len(source_files),
+        "source_markdown_by_model_directory": dict(sorted(by_model_dir.items())),
+        "supplementary_material_file_count": len(supplementary_files),
+        "supplementary_material_files_by_transmission": dict(sorted(by_supp_dir.items())),
+        "script_file_count": len(script_files),
     }
-
-
-def summarize_file(path: Path) -> Dict[str, Any]:
-    entry = basic_file_entry(path)
-
-    try:
-        if path.name == "combined_leilan_dataset.json":
-            entry.update(summarize_combined(path))
-        elif path.name == "combined_leilan_dataset_records.jsonl":
-            entry.update(summarize_combined_jsonl(path))
-        elif path.name == "full_leilan_gpt3_dataset.json":
-            entry.update(summarize_gpt3_raw(path))
-        elif path.name == "full_leilan_gpt3_dataset_normalized.json":
-            entry.update(summarize_gpt3_normalized(path))
-        elif path.name == "full_leilan_gpt3_dataset_normalized.jsonl":
-            entry.update(summarize_gpt3_normalized_jsonl(path))
-        elif path.name == "full_leilan_claude_dataset.json":
-            entry.update(summarize_claude(path))
-        elif path.name == "leilan_gpt3_passages.json":
-            entry.update(summarize_passages(path))
-    except Exception as e:
-        entry["summary_error"] = str(e)
-
-    return entry
 
 
 def main() -> int:
-    missing = [path for path in CORE_FILES if not Path(path).exists()]
+    missing = [p for p in CORE_FILES if not Path(p).exists()]
     if missing:
         print("ERROR: Missing expected files:")
-        for path in missing:
-            print(f"  - {path}")
-        print("\nIf a missing path is intentional, edit CORE_FILES in scripts/generate_manifest.py.")
-        return 1
+        for p in missing:
+            print(f"  - {p}")
+        raise SystemExit(1)
 
-    entries = []
-    for path_str in CORE_FILES:
-        entries.append(summarize_file(Path(path_str)))
+    source_files = collect_source_markdown_files()
+    supplementary_files = collect_supplementary_material_files()
+    script_files = collect_script_files()
 
-    manifest = {
-        "manifest_version": MANIFEST_VERSION,
-        "dataset_id": DATASET_ID,
-        "generated_utc": now_utc_iso(),
-        "license": "CC0-1.0",
-        "repository": "https://github.com/mwatkins1970/Leilan-dataset",
-        "notes": [
-            "This manifest records file sizes, SHA256 hashes, and key dataset counts for the public Leilan Dataset release.",
-            "Regenerate after intentionally changing any core dataset or documentation file."
-        ],
-        "files": entries,
+    sections = {
+        "core_files": [file_entry(p, "core") for p in CORE_FILES],
+        "source_markdown_files": [file_entry(p, "source_markdown") for p in source_files],
+        "supplementary_material_files": [file_entry(p, "supplementary_material") for p in supplementary_files],
+        "script_files": [file_entry(p, "script") for p in script_files],
     }
 
-    write_json_atomic(OUTPUT_PATH, manifest)
+    files = []
+    seen = set()
+    for entries in sections.values():
+        for entry in entries:
+            if entry["path"] in seen:
+                continue
+            seen.add(entry["path"])
+            files.append(entry)
+
+    manifest = {
+        "manifest_schema_version": "2.0",
+        "dataset_name": "Leilan Dataset",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "files": sorted(files, key=lambda e: e["path"]),
+        "sections": sections,
+        "file_counts": {
+            "total_files": len(files),
+            "core_files": len(sections["core_files"]),
+            "source_markdown_files": len(sections["source_markdown_files"]),
+            "supplementary_material_files": len(sections["supplementary_material_files"]),
+            "script_files": len(sections["script_files"]),
+        },
+        "dataset_counts": {
+            "combined": combined_counts(),
+            "gpt3_normalized": gpt3_normalized_counts(),
+            "claude_family": claude_counts(),
+            "gpt3_passages": passage_counts(),
+            "source_tree": source_tree_counts(source_files, supplementary_files, script_files),
+        },
+        "notes": [
+            "The canonical machine-facing entry point is combined_leilan_dataset_records.jsonl.",
+            "Source Markdown and supplementary materials are included for auditability/provenance, not as additive training examples.",
+            "GPT-4 base outputs are not included in this public release.",
+        ],
+    }
+
+    Path("MANIFEST.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print("Generated MANIFEST.json")
-    print(f"Files indexed: {len(entries)}")
-    for entry in entries:
+    print(f"Files indexed: {len(files)}")
+    print(f"  core files:                  {len(sections['core_files'])}")
+    print(f"  source Markdown files:        {len(sections['source_markdown_files'])}")
+    print(f"  supplementary material files: {len(sections['supplementary_material_files'])}")
+    print(f"  tracked script files:         {len(sections['script_files'])}")
+    print("")
+    print("Core files:")
+    for entry in sections["core_files"]:
         print(f"  - {entry['path']} ({entry['bytes']} bytes)")
+
     return 0
 
 
