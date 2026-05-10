@@ -1,13 +1,13 @@
 {
   "manifest_schema_version": "2.0",
   "dataset_name": "Leilan Dataset",
-  "generated_at_utc": "2026-05-10T20:16:00+00:00",
+  "generated_at_utc": "2026-05-10T20:37:40+00:00",
   "files": [
     {
       "path": "DATASET_CARD.md",
       "category": "core",
-      "bytes": 15766,
-      "sha256": "97f2797d11b5e3ca2fc2fba847a8bdcb4d3a7427f1a5cc89449ebdd967a20168"
+      "bytes": 16347,
+      "sha256": "e2115d02fc00145d87d22715f7c9710a80bab845308d565481e4240ba6f380a6"
     },
     {
       "path": "LICENSE",
@@ -6669,8 +6669,8 @@
       {
         "path": "DATASET_CARD.md",
         "category": "core",
-        "bytes": 15766,
-        "sha256": "97f2797d11b5e3ca2fc2fba847a8bdcb4d3a7427f1a5cc89449ebdd967a20168"
+        "bytes": 16347,
+        "sha256": "e2115d02fc00145d87d22715f7c9710a80bab845308d565481e4240ba6f380a6"
       },
       {
         "path": "LICENSE",

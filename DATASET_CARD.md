@@ -410,11 +410,25 @@ If citing a specific file, include the filename and commit hash or release tag w
 
 ## Versioning
 
-This dataset card describes the repository after creation of the normalized GPT-3 corpus and combined GPT-3 + Claude-family corpus.
+This dataset card describes the public `v1.0` release of the Leilan Dataset.
+
+The `v1.0` release includes:
+
+- canonical combined JSON and JSONL corpus files;
+- normalized GPT-3 dataset files;
+- curated Claude-family dataset files;
+- `MANIFEST.json` with SHA256 hashes, byte sizes, dataset counts, source-tree counts, supplementary-material counts, and tracked-script coverage;
+- `scripts/generate_manifest.py`;
+- `scripts/validate_dataset.py`;
+- a CC0 1.0 public-domain dedication;
+- supplementary materials for selected transmissions where they can be legally and usefully provided;
+- machine-ingestion guidance advising downstream users to prefer `combined_leilan_dataset_records.jsonl` and deduplicate by `record_id`.
+
+GPT-4 base outputs are not included in the public source tree or in the canonical dataset.
 
 Future releases may add:
 
 - a formal JSON Schema or `SCHEMA.md`;
-- broader source-tree manifest coverage for every Markdown source file and supplementary material;
 - additional supplementary materials where they can be legally and usefully provided;
-- tagged release assets and checksums for external archival mirrors.
+- external archival mirrors or platform-specific dataset releases.
+
