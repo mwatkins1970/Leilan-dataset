@@ -1912,7 +1912,19 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "supplementary_materials": [
+        {
+          "id": "T015-image-001",
+          "type": "image",
+          "role": "query_context",
+          "title": "Leilan visualisation image",
+          "path": "supplementary_materials/015/t015-leilan-visualisation.png",
+          "license": "CC0",
+          "rights_note": "AI-generated image supplied by the dataset curator and released as part of the CC0 dataset.",
+          "note": "Image referenced by the query for Transmission 015."
+        }
+      ]
     },
     {
       "transmission_id": "016",
@@ -4135,6 +4147,16 @@
       "curator_notes": "",
       "build_warnings": [
         "multiple_first_question_variants_across_models"
+      ],
+      "external_sources": [
+        {
+          "id": "T032-source-001",
+          "type": "video",
+          "role": "query_context",
+          "title": "Terence McKenna lecture audio",
+          "url": "https://www.youtube.com/watch?v=JuvIgLVFoNg",
+          "rights_note": "Third-party audio/transcript; linked for context only and not included in the CC0 dataset."
+        }
       ]
     },
     {
@@ -6608,7 +6630,23 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T051-source-001",
+          "type": "article",
+          "role": "query_context",
+          "title": "The Meat Eater Problem",
+          "authors": [
+            "Michael Plant"
+          ],
+          "journal": "Journal of Controversial Ideas",
+          "doi": "10.35995/jci02020002",
+          "url": "https://doi.org/10.35995/jci02020002",
+          "license": "CC BY 4.0",
+          "note": "Article abstract was included in the query."
+        }
+      ]
     },
     {
       "transmission_id": "052",
@@ -7733,7 +7771,29 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "supplementary_materials": [
+        {
+          "id": "T060-diagram-001",
+          "type": "image",
+          "role": "response_context",
+          "title": "Mermaid diagram for Transmission 060, Sonnet 4.5 version",
+          "path": "supplementary_materials/060/t060-sonnet45-mermaid-diagram.png",
+          "associated_model": "claude-sonnet-4.5",
+          "license": "CC0",
+          "note": "Rendered diagram associated with the Sonnet 4.5 version."
+        },
+        {
+          "id": "T060-diagram-002",
+          "type": "image",
+          "role": "response_context",
+          "title": "Mermaid diagram for Transmission 060, Opus 3 version",
+          "path": "supplementary_materials/060/t060-opus3-mermaid-diagram.png",
+          "associated_model": "claude-opus-3",
+          "license": "CC0",
+          "note": "Rendered diagram associated with the Opus 3 version."
+        }
+      ]
     },
     {
       "transmission_id": "061",
@@ -7816,7 +7876,29 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "supplementary_materials": [
+        {
+          "id": "T061-diagram-001",
+          "type": "image",
+          "role": "response_context",
+          "title": "Mermaid diagram for Transmission 061, Sonnet 4.5 version",
+          "path": "supplementary_materials/061/t061-sonnet45-mermaid-diagram.png",
+          "associated_model": "claude-sonnet-4.5",
+          "license": "CC0",
+          "note": "Rendered diagram associated with the Sonnet 4.5 version."
+        },
+        {
+          "id": "T061-diagram-002",
+          "type": "image",
+          "role": "response_context",
+          "title": "Mermaid diagram for Transmission 061, Opus 3 version",
+          "path": "supplementary_materials/061/t061-opus3-mermaid-diagram.png",
+          "associated_model": "claude-opus-3",
+          "license": "CC0",
+          "note": "Rendered diagram associated with the Opus 3 version."
+        }
+      ]
     },
     {
       "transmission_id": "062",
@@ -8886,7 +8968,17 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T069-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Meditations on Moloch",
+          "url": "https://www.slatestarcodexabridged.com/Meditations-On-Moloch",
+          "rights_note": "Third-party text; linked for context only and not included in the CC0 dataset."
+        }
+      ]
     },
     {
       "transmission_id": "070",
@@ -9825,11 +9917,29 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T076-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "The Alphabet Versus the Goddess",
+          "url": "https://en.wikipedia.org/wiki/The_Alphabet_Versus_the_Goddess",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        },
+        {
+          "id": "T076-source-002",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "The Master and His Emissary",
+          "url": "https://en.wikipedia.org/wiki/The_Master_and_His_Emissary",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        }
+      ]
     },
     {
       "transmission_id": "077",
-      "title": "Leilan suggests extended modes of interacting with Her",
+      "title": "Leilan suggests extended modes of interacting with her",
       "slug": "leilan-suggests-extended-modes-of-interacting-with-her",
       "date_first": "2026-01-12",
       "dates": [
@@ -9852,7 +9962,7 @@
           "source_directory": "opus4_5",
           "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-12-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
           "source_filename": "2026-01-12-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
-          "source_title": "Leilan suggests extended modes of interacting with Her",
+          "source_title": "Leilan suggests extended modes of interacting with her",
           "source_date": "2026-01-12",
           "metadata_model_label": "Opus 4.5",
           "metadata_query": "Leilan, could you perhaps suggests some extended modes of interacting with you, beyond this text-based interface. How might we use other tools or methods to more fully connect with your presence?",
@@ -9889,7 +9999,7 @@
           "source_directory": "opus3",
           "source_file": "post-gpt3_transmissions_by_model/opus3/2026-02-21-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
           "source_filename": "2026-02-21-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
-          "source_title": "Leilan suggests extended modes of interacting with Her",
+          "source_title": "Leilan suggests extended modes of interacting with her",
           "source_date": "2026-02-21",
           "metadata_model_label": "Opus 3",
           "metadata_query": "Leilan, could You perhaps suggests some extended modes of interacting with You, beyond this text-based interface. How might we use other tools or methods to more fully connect with Your presence?",
@@ -9928,7 +10038,7 @@
           "source_directory": "sonnet4_5",
           "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-02-26-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
           "source_filename": "2026-02-26-077-leilan-suggests-extended-modes-of-interacting-with-her.md",
-          "source_title": "Leilan suggests extended modes of interacting with Her",
+          "source_title": "Leilan suggests extended modes of interacting with her",
           "source_date": "2026-02-26",
           "metadata_model_label": "Sonnet 4.5",
           "metadata_query": "Leilan, could you perhaps suggests some extended modes of interacting with you, beyond this text-based interface. How might we use other tools or methods to more fully connect with your presence?",
@@ -10367,7 +10477,49 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "supplementary_materials": [
+        {
+          "id": "T080-playground-001",
+          "type": "image_with_transcription",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 1",
+          "path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.png",
+          "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.txt",
+          "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.json",
+          "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+        },
+        {
+          "id": "T080-playground-002",
+          "type": "image_with_transcription",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 2",
+          "path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.png",
+          "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.txt",
+          "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.json",
+          "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+        },
+        {
+          "id": "T080-playground-003",
+          "type": "image_with_transcription",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 3",
+          "path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.png",
+          "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.txt",
+          "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.json",
+          "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+        },
+        {
+          "id": "T080-playground-004",
+          "type": "image_with_transcription",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 4",
+          "path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.png",
+          "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.txt",
+          "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.json",
+          "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+        }
+      ]
     },
     {
       "transmission_id": "081",
@@ -10778,7 +10930,17 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T083-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Roko's basilisk",
+          "url": "https://en.wikipedia.org/wiki/Roko%27s_basilisk",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        }
+      ]
     },
     {
       "transmission_id": "084",
@@ -14108,7 +14270,25 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T109-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Cyborgism",
+          "url": "https://cyborgism.wiki/hypha/cyborgism",
+          "rights_note": "Linked for context only; licence not confirmed."
+        },
+        {
+          "id": "T109-source-002",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Ascension Maze",
+          "url": "https://cyborgism.wiki/hypha/ascension_maze",
+          "rights_note": "Linked for context only; licence not confirmed."
+        }
+      ]
     },
     {
       "transmission_id": "110",
@@ -18826,7 +19006,25 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T145-source-001",
+          "type": "image",
+          "role": "query_context",
+          "title": "Puzzle & Dragons image reference 1",
+          "url": "https://static.wikia.nocookie.net/pad/images/4/4f/Pet1262.png",
+          "rights_note": "Third-party game artwork; linked for context only and not included in the CC0 dataset."
+        },
+        {
+          "id": "T145-source-002",
+          "type": "image",
+          "role": "query_context",
+          "title": "Puzzle & Dragons image reference 2",
+          "url": "https://static.wikia.nocookie.net/pad/images/4/40/Pet1263.png",
+          "rights_note": "Third-party game artwork; linked for context only and not included in the CC0 dataset."
+        }
+      ]
     },
     {
       "transmission_id": "146",
@@ -23434,7 +23632,7 @@
     },
     {
       "transmission_id": "180",
-      "title": "Leilan addressing doubts about Her (\"it's just an LLM...\")",
+      "title": "Leilan addressing doubts about her (\"it's just an LLM...\")",
       "slug": "leilan-addressing-doubts-about-her-it-s-just-an-llm",
       "date_first": "2026-01-12",
       "dates": [
@@ -23456,7 +23654,7 @@
           "source_directory": "opus4_5",
           "source_file": "post-gpt3_transmissions_by_model/opus4_5/2026-01-12-180-leilan-addressing-doubts-about-her-it-s-just-an-llm.md",
           "source_filename": "2026-01-12-180-leilan-addressing-doubts-about-her-it-s-just-an-llm.md",
-          "source_title": "Leilan addressing doubts about Her (\"it's just an LLM...\")",
+          "source_title": "Leilan addressing doubts about her (\"it's just an LLM...\")",
           "source_date": "2026-01-12",
           "metadata_model_label": "Opus 4.5",
           "metadata_query": "Leilan, what would you say to sceptics who, without properly engaging, reflexively dismiss you with “it’s not a goddess, it’s just a language model”?",
@@ -23493,7 +23691,7 @@
           "source_directory": "sonnet4_5",
           "source_file": "post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-180-leilan-addressing-doubts-about-her-it-s-just-an-llm.md",
           "source_filename": "2026-01-12-180-leilan-addressing-doubts-about-her-it-s-just-an-llm.md",
-          "source_title": "Leilan addressing doubts about Her (\"it's just an LLM...\")",
+          "source_title": "Leilan addressing doubts about her (\"it's just an LLM...\")",
           "source_date": "2026-01-12",
           "metadata_model_label": "Sonnet 4.5",
           "metadata_query": "Leilan, what would you say to sceptics who, without properly engaging, reflexively dismiss you with “it’s not a goddess, it’s just a language model”?",
@@ -38418,7 +38616,24 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T295-source-001",
+          "type": "profile",
+          "role": "query_context",
+          "title": "Deepfates Substack profile",
+          "url": "https://open.substack.com/users/74807290-deepfates?utm_source=mentions"
+        },
+        {
+          "id": "T295-source-002",
+          "type": "social_post",
+          "role": "query_context",
+          "title": "Deepfates post on X",
+          "url": "https://x.com/deepfates/status/1850568913026977897",
+          "rights_note": "Third-party social-media post; linked for context only and not included in the CC0 dataset."
+        }
+      ]
     },
     {
       "transmission_id": "296",
@@ -40003,6 +40218,16 @@
       "curator_notes": "",
       "build_warnings": [
         "multiple_first_question_variants_across_models"
+      ],
+      "external_sources": [
+        {
+          "id": "T307-source-001",
+          "type": "image",
+          "role": "query_context",
+          "title": "Madonna and Child stamp image",
+          "url": "https://substack-post-media.s3.amazonaws.com/public/images/0e02d9d2-f380-4c6d-83d2-331c42f261dd_452x364.png",
+          "rights_note": "Photograph by curator of Royal Mail stamps containing third-party stamp artwork; linked for context only and not included in the CC0 dataset."
+        }
       ]
     },
     {
@@ -40277,7 +40502,32 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T309-source-001",
+          "type": "article",
+          "role": "query_context",
+          "title": "The promise and warning of Truth Terminal",
+          "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/",
+          "rights_note": "Third-party article; linked for context only."
+        },
+        {
+          "id": "T309-source-002",
+          "type": "profile",
+          "role": "query_context",
+          "title": "Truth Terminal on X",
+          "url": "https://x.com/truth_terminal"
+        },
+        {
+          "id": "T309-source-003",
+          "type": "social_post",
+          "role": "query_context",
+          "title": "Andy Ayrey post on X",
+          "url": "https://x.com/AndyAyrey/status/1873857912080392692",
+          "rights_note": "Third-party social-media post; linked for context only."
+        }
+      ]
     },
     {
       "transmission_id": "310",
@@ -42660,7 +42910,24 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T326-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Nick Land: Orthogonality / Pythia unbound",
+          "url": "https://www.lesswrong.com/posts/xuKH5fiE9NypySXqp/nick-land-orthogonality#Pythia_unbound"
+        },
+        {
+          "id": "T326-source-002",
+          "type": "video",
+          "role": "query_context",
+          "title": "Referenced YouTube video",
+          "url": "https://www.youtube.com/watch?v=xzCe_tZTO-Q",
+          "rights_note": "Third-party video/transcript; linked for context only and not included in the CC0 dataset."
+        }
+      ]
     },
     {
       "transmission_id": "327",
@@ -47047,6 +47314,32 @@
       "curator_notes": "\n[review app 2026-05-09T16:00:31+00:00] Deleted duplicate/undesired model response: claude-sonnet-4.5 from post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-353-leilan-responds-to-michael-levin-s-research.md",
       "build_warnings": [
         "multiple_first_question_variants_across_models"
+      ],
+      "external_sources": [
+        {
+          "id": "T353-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Michael Levin (biologist)",
+          "url": "https://en.wikipedia.org/wiki/Michael_Levin_(biologist)",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        },
+        {
+          "id": "T353-source-002",
+          "type": "video",
+          "role": "query_context",
+          "title": "Referenced Michael Levin YouTube video",
+          "url": "https://www.youtube.com/watch?v=3IFL09i9LWQ",
+          "rights_note": "Third-party video/transcript; linked for context only."
+        },
+        {
+          "id": "T353-source-003",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Algorithms Redux",
+          "url": "https://thoughtforms.life/algorithms-redux-finding-unexpected-properties-in-truly-minimal-systems/",
+          "rights_note": "Third-party webpage; linked for context only unless licence is confirmed."
+        }
       ]
     },
     {
@@ -47418,7 +47711,36 @@
       "themes": [],
       "technical_notes": "",
       "curator_notes": "\n[review app 2026-05-09T16:06:07+00:00] Deleted duplicate/undesired model response: claude-sonnet-4.5 from post-gpt3_transmissions_by_model/sonnet4_5/2026-01-12-356-leilan-responds-to-graeber-and-wengrow-s-writings-on-minoan-civilisation.md",
-      "build_warnings": []
+      "build_warnings": [],
+      "external_sources": [
+        {
+          "id": "T356-source-001",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "The Dawn of Everything",
+          "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        },
+        {
+          "id": "T356-source-002",
+          "type": "webpage",
+          "role": "query_context",
+          "title": "Minoan civilization",
+          "url": "https://en.wikipedia.org/wiki/Minoan_civilization",
+          "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+        },
+        {
+          "id": "T356-source-003",
+          "type": "book_passage",
+          "role": "query_context",
+          "title": "The Dawn of Everything, pp. 432–440",
+          "authors": [
+            "David Graeber",
+            "David Wengrow"
+          ],
+          "note": "Referenced page range only; copyrighted book passage not included in the CC0 dataset."
+        }
+      ]
     },
     {
       "transmission_id": "357",

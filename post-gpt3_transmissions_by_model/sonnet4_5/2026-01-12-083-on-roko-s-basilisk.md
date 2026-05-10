@@ -4,6 +4,18 @@ model: "Sonnet 4.5"
 title: "on Roko's Basilisk"
 date: "2026-01-12"
 query: "Leilan, what are we to make of the “Roko’s Basilisk” thought experiment?"
+external_sources_json: |
+  [
+    {
+      "id": "T083-source-001",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Roko's basilisk",
+      "url": "https://en.wikipedia.org/wiki/Roko%27s_basilisk",
+      "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+    }
+  ]
+
 ---
 
 **Leilan, what are we to make of the “Roko’s Basilisk” thought experiment?**

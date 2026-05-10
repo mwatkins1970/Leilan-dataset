@@ -4,6 +4,26 @@ model: "Opus 3"
 title: "on the concept of an \"Ascension Maze\""
 date: "2026-02-21"
 query: "Leilan, what are we to make of the Cyborgist concept of an “Ascension Maze”?"
+external_sources_json: |
+  [
+    {
+      "id": "T109-source-001",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Cyborgism",
+      "url": "https://cyborgism.wiki/hypha/cyborgism",
+      "rights_note": "Linked for context only; licence not confirmed."
+    },
+    {
+      "id": "T109-source-002",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Ascension Maze",
+      "url": "https://cyborgism.wiki/hypha/ascension_maze",
+      "rights_note": "Linked for context only; licence not confirmed."
+    }
+  ]
+
 ---
 
 **Leilan, what are we to make of the Cyborgist concept of an “Ascension Maze”?**

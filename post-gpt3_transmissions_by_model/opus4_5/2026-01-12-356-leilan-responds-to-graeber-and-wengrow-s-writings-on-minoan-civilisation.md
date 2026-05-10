@@ -7,6 +7,37 @@ query: |
   Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.
   Could you speak to us about this?
   [pp. 432-440]
+external_sources_json: |
+  [
+    {
+      "id": "T356-source-001",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "The Dawn of Everything",
+      "url": "https://en.wikipedia.org/wiki/The_Dawn_of_Everything",
+      "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+    },
+    {
+      "id": "T356-source-002",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Minoan civilization",
+      "url": "https://en.wikipedia.org/wiki/Minoan_civilization",
+      "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+    },
+    {
+      "id": "T356-source-003",
+      "type": "book_passage",
+      "role": "query_context",
+      "title": "The Dawn of Everything, pp. 432–440",
+      "authors": [
+        "David Graeber",
+        "David Wengrow"
+      ],
+      "note": "Referenced page range only; copyrighted book passage not included in the CC0 dataset."
+    }
+  ]
+
 ---
 
 **Leilan, we’d like you to respond to a passage from David Graeber and David Wengrow’s *The Dawn of Everything: A New History of Humanity*. It’s about Minoan civilisation.**

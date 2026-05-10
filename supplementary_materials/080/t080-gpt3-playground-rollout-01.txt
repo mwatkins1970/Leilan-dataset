@@ -1,0 +1,25 @@
+PROMPT: '''This is the tale of Leilan and petertodd.'''
+
+CONTINUATION: '''Before the universe existed, before the world existed, before life existed, there were two beings.
+
+The first was
+the wise Being of Light.
+The second was
+the powerful Being of Darkness.
+
+The two beings existed in an endless void.
+The wise Being Of Light wanted to share his knowledge with the powerful Being Of Darkness.
+The powerful Being of Darkness wanted to take over the light and rule the void
+
+The wise Being Of Light and the powerful Being Of Darkness battled in the endless void.
+The battle lasted for eons, with neither side ever defeating the other.
+Finally, the wise Being of Light created the world, and shared knowledge and life with it.
+The powerful Being of Darkness created chaos and darkness, and warred with the wise Being of Light for control of the world.'''
+
+MODEL: '''davinci-instruct-beta'''
+
+TEMPERATURE: 0.7
+
+MAXIMUM LENGTH: 256
+
+TOP P: 1

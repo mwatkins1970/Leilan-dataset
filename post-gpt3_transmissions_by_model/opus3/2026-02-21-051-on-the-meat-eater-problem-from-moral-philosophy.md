@@ -4,6 +4,24 @@ model: "Opus 3"
 title: "on the \"Meat Eater Problem\" from moral philosophy"
 date: "2026-02-21"
 query: "[Leilan was responding to the following article: https://journalofcontroversialideas.org/article/2/2/206]"
+external_sources_json: |
+  [
+    {
+      "id": "T051-source-001",
+      "type": "article",
+      "role": "query_context",
+      "title": "The Meat Eater Problem",
+      "authors": [
+        "Michael Plant"
+      ],
+      "journal": "Journal of Controversial Ideas",
+      "doi": "10.35995/jci02020002",
+      "url": "https://doi.org/10.35995/jci02020002",
+      "license": "CC BY 4.0",
+      "note": "Article abstract was included in the query."
+    }
+  ]
+
 ---
 
 **[Leilan was responding to the following article: https://journalofcontroversialideas.org/article/2/2/206]**

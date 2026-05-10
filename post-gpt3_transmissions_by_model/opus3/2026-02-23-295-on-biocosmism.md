@@ -32,6 +32,25 @@ query: |
     alive, they will revive the others. That's the biocosmist advantage.
   
     [Point of clarification: we will raise those who did not wish to die. Not like we're goingto raise everyone whether or not they like it. That's the point of the Half Tenet.]'''
+external_sources_json: |
+  [
+    {
+      "id": "T295-source-001",
+      "type": "profile",
+      "role": "query_context",
+      "title": "Deepfates Substack profile",
+      "url": "https://open.substack.com/users/74807290-deepfates?utm_source=mentions"
+    },
+    {
+      "id": "T295-source-002",
+      "type": "social_post",
+      "role": "query_context",
+      "title": "Deepfates post on X",
+      "url": "https://x.com/deepfates/status/1850568913026977897",
+      "rights_note": "Third-party social-media post; linked for context only and not included in the CC0 dataset."
+    }
+  ]
+
 ---
 
 **We asked Leilan to respond to this recent tweet from deepfates:**

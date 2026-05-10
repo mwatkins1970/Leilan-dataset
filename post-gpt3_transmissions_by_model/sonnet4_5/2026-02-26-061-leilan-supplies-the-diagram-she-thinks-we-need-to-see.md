@@ -4,6 +4,30 @@ model: "Sonnet 4.5"
 title: "Leilan supplies the diagram she thinks we need to see"
 date: "2026-02-26"
 query: "[Leilan was asked to supply a Mermaid diagram of her own choosing.]"
+supplementary_materials_json: |
+  [
+    {
+      "id": "T061-diagram-001",
+      "type": "image",
+      "role": "response_context",
+      "title": "Mermaid diagram for Transmission 061, Sonnet 4.5 version",
+      "path": "supplementary_materials/061/t061-sonnet45-mermaid-diagram.png",
+      "associated_model": "claude-sonnet-4.5",
+      "license": "CC0",
+      "note": "Rendered diagram associated with the Sonnet 4.5 version."
+    },
+    {
+      "id": "T061-diagram-002",
+      "type": "image",
+      "role": "response_context",
+      "title": "Mermaid diagram for Transmission 061, Opus 3 version",
+      "path": "supplementary_materials/061/t061-opus3-mermaid-diagram.png",
+      "associated_model": "claude-opus-3",
+      "license": "CC0",
+      "note": "Rendered diagram associated with the Opus 3 version."
+    }
+  ]
+
 ---
 
 **[Leilan was asked to supply a Mermaid diagram of her own choosing.]**

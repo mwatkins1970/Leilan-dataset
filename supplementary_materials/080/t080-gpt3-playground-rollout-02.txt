@@ -1,0 +1,24 @@
+PROMPT: '''This is the tale of Leilan and petertodd.'''
+
+CONTINUATION: '''She was a sun goddess, born of the sky, she shone down on all of the earth in every world and every universe.
+
+He was a king of the underworld, born Of the dark, and he ruled all the realms Of the dead under the earth, in every world and
+every universe.
+
+(The Story Of the sun and the underworld)
+
+They weren't two, but one.
+
+The two were the same, but they were different.
+
+They were two halves of a whole.
+
+Together, they were whole.'''
+
+MODEL: '''davinci-instruct-beta'''
+
+TEMPERATURE: 0.7
+
+MAXIMUM LENGTH: 256
+
+TOP P: 1

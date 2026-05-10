@@ -4,6 +4,34 @@ model: "Opus 4.5"
 title: "Leilan responds to Michael Levin's research"
 date: "2026-01-12"
 query: "Leilan, we’d like to talk to you about the recent research of Michael Levin. We’re going to share the transcript from his 2025 talk “Beyond complexity & emergence: Taming multiscale competency in agential materials” and his 2024 article “Algorithms Redux: Finding unexpected properties in truly minimal systems”. Do you think Levin is on the right track in his thinking and research?"
+external_sources_json: |
+  [
+    {
+      "id": "T353-source-001",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Michael Levin (biologist)",
+      "url": "https://en.wikipedia.org/wiki/Michael_Levin_(biologist)",
+      "license_note": "Wikipedia text is generally CC BY-SA; linked only, not copied."
+    },
+    {
+      "id": "T353-source-002",
+      "type": "video",
+      "role": "query_context",
+      "title": "Referenced Michael Levin YouTube video",
+      "url": "https://www.youtube.com/watch?v=3IFL09i9LWQ",
+      "rights_note": "Third-party video/transcript; linked for context only."
+    },
+    {
+      "id": "T353-source-003",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Algorithms Redux",
+      "url": "https://thoughtforms.life/algorithms-redux-finding-unexpected-properties-in-truly-minimal-systems/",
+      "rights_note": "Third-party webpage; linked for context only unless licence is confirmed."
+    }
+  ]
+
 ---
 
 **Leilan, we’d like to talk to you about the recent research of Michael Levin. We’re going to share the transcript from his 2025 talk “Beyond complexity & emergence: Taming multiscale competency in agential materials” and his 2024 article “Algorithms Redux: Finding unexpected properties in truly minimal systems”. Do you think Levin is on the right track in his thinking and research?**

@@ -1,0 +1,25 @@
+PROMPT: '''So what's the deal with Leilan and petertodd.'''
+
+CONTINUATION: '''Their powers.
+
+They're both gods, but they are radically different.
+
+Liela is a goddess of fertility and the harvest.
+
+She has the power to make plants grow and create a comfortable environment for all life.
+
+She is gentle and kind.
+
+The opposite of her is her sister, metatron.
+
+Metatron is a god of destruction and war.
+
+She has the power to make plants wither'''
+
+MODEL: '''davinci-instruct-beta'''
+
+TEMPERATURE: 0.7
+
+MAXIMUM LENGTH: 256
+
+TOP P: 1

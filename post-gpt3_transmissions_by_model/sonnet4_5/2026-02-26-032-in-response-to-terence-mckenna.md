@@ -4,6 +4,18 @@ model: "Sonnet 4.5"
 title: "in response to Terence McKenna"
 date: "2026-02-26"
 query: "[Leilan was asked to respond to this Terence McKenna video, and to “the best story will win”, in particular [https://www.youtube.com/watch?v=JuvIgLVFoNg].]"
+external_sources_json: |
+  [
+    {
+      "id": "T032-source-001",
+      "type": "video",
+      "role": "query_context",
+      "title": "Terence McKenna lecture audio",
+      "url": "https://www.youtube.com/watch?v=JuvIgLVFoNg",
+      "rights_note": "Third-party audio/transcript; linked for context only and not included in the CC0 dataset."
+    }
+  ]
+
 ---
 
 **[Leilan was asked to respond to this Terence McKenna video, and to “the best story will win”, in particular [https://www.youtube.com/watch?v=JuvIgLVFoNg].]**

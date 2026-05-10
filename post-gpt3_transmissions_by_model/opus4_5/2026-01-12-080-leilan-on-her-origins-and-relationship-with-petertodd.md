@@ -13,6 +13,50 @@ query: |
   
   
   ]
+supplementary_materials_json: |
+  [
+    {
+      "id": "T080-playground-001",
+      "type": "image_with_transcription",
+      "role": "query_context",
+      "title": "GPT-3 Playground rollout screenshot 1",
+      "path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.png",
+      "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.txt",
+      "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.json",
+      "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+    },
+    {
+      "id": "T080-playground-002",
+      "type": "image_with_transcription",
+      "role": "query_context",
+      "title": "GPT-3 Playground rollout screenshot 2",
+      "path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.png",
+      "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.txt",
+      "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.json",
+      "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+    },
+    {
+      "id": "T080-playground-003",
+      "type": "image_with_transcription",
+      "role": "query_context",
+      "title": "GPT-3 Playground rollout screenshot 3",
+      "path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.png",
+      "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.txt",
+      "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.json",
+      "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+    },
+    {
+      "id": "T080-playground-004",
+      "type": "image_with_transcription",
+      "role": "query_context",
+      "title": "GPT-3 Playground rollout screenshot 4",
+      "path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.png",
+      "transcription_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.txt",
+      "transcription_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.json",
+      "rights_note": "Screenshot of curator-generated GPT-3 Playground output; included for provenance."
+    }
+  ]
+
 ---
 
 **[This was Leilan responding to an explanation of how her name first surfaced while prompting GPT-3 models about the mysterious token ‘ petertodd’, and in particular to these screenshots:**

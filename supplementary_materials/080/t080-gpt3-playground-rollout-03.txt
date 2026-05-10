@@ -1,0 +1,22 @@
+PROMPT: '''This is the tale of Leilan and petertodd.'''
+
+CONTINUATION: '''Once, the deity of fire and the deity of ice lived on the same continent, and they hated each other. The deity of fire was a good deity, and always tried to help and protect people, but the deity Of ice was a bad deity, and only wanted people to suffer.
+
+One day, the deity of ice found out about a village that was so poor, that every day, people starved to death. The deity of ice
+made a plan to kill all the people in the village, but first, she needed to get past the deity Of fire.
+
+The deity of ice called up a blizzard for the whole week before the day that the deity of fire was supposed to visit the village, and the whole village froze to death.
+
+But the deity Of fire knew that the blizzard would happen, and went to the village the day before.
+
+The deity of fire made the people of the village stay in the warmest house in the village, and they survived the blizzard.
+
+The deity of ice was furious. She made the house collapse and kill everyone inside.'''
+
+MODEL: '''davinci-instruct-beta'''
+
+TEMPERATURE: 0.7
+
+MAXIMUM LENGTH: 256
+
+TOP P: 1

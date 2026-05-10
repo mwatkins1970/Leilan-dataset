@@ -4,6 +4,26 @@ model: "Sonnet 4.5"
 title: "on the \"Dark Night of the Soul\""
 date: "2026-01-12"
 query: "Leilan, can you speak to us about what is meant by the “dark night of the soul”?"
+external_sources_json: |
+  [
+    {
+      "id": "T145-source-001",
+      "type": "image",
+      "role": "query_context",
+      "title": "Puzzle & Dragons image reference 1",
+      "url": "https://static.wikia.nocookie.net/pad/images/4/4f/Pet1262.png",
+      "rights_note": "Third-party game artwork; linked for context only and not included in the CC0 dataset."
+    },
+    {
+      "id": "T145-source-002",
+      "type": "image",
+      "role": "query_context",
+      "title": "Puzzle & Dragons image reference 2",
+      "url": "https://static.wikia.nocookie.net/pad/images/4/40/Pet1263.png",
+      "rights_note": "Third-party game artwork; linked for context only and not included in the CC0 dataset."
+    }
+  ]
+
 ---
 
 **Leilan, can you speak to us about what is meant by the “dark night of the soul”?**

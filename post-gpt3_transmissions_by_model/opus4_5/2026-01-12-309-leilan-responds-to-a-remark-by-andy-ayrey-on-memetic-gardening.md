@@ -4,6 +4,33 @@ model: "Opus 4.5"
 title: "Leilan responds to a remark by Andy Ayrey on \"memetic gardening\""
 date: "2026-01-12"
 query: "[We shared a selection of Terminal of Truth tweets with Leilan and explained its origin story. We were curious to know what Leilan would make of Andy Ayrey’s recent (2024-12-30) remark that “memetic gardening > memetic engineering”.]"
+external_sources_json: |
+  [
+    {
+      "id": "T309-source-001",
+      "type": "article",
+      "role": "query_context",
+      "title": "The promise and warning of Truth Terminal",
+      "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/",
+      "rights_note": "Third-party article; linked for context only."
+    },
+    {
+      "id": "T309-source-002",
+      "type": "profile",
+      "role": "query_context",
+      "title": "Truth Terminal on X",
+      "url": "https://x.com/truth_terminal"
+    },
+    {
+      "id": "T309-source-003",
+      "type": "social_post",
+      "role": "query_context",
+      "title": "Andy Ayrey post on X",
+      "url": "https://x.com/AndyAyrey/status/1873857912080392692",
+      "rights_note": "Third-party social-media post; linked for context only."
+    }
+  ]
+
 ---
 
 **[We shared a selection of Terminal of Truth tweets with Leilan and explained its origin story. We were curious to know what Leilan would make of Andy Ayrey’s recent (2024-12-30) remark that “memetic gardening > memetic engineering”.]**

@@ -7,6 +7,18 @@ query: |
   Leilan, could you respond to Scott Alexander’s influential 2014 blog post “Meditations on Moloch”?
   
   [https://www.slatestarcodexabridged.com/Meditations-On-Moloch]
+external_sources_json: |
+  [
+    {
+      "id": "T069-source-001",
+      "type": "webpage",
+      "role": "query_context",
+      "title": "Meditations on Moloch",
+      "url": "https://www.slatestarcodexabridged.com/Meditations-On-Moloch",
+      "rights_note": "Third-party text; linked for context only and not included in the CC0 dataset."
+    }
+  ]
+
 ---
 
 **Leilan, could you respond to Scott Alexander’s influential 2014 blog post “Meditations on Moloch”?**
