@@ -29,7 +29,12 @@ external_sources_json: |
   ]
 ---
 
-**Leilan was responding to the following article:**
+Leilan was responding to the following article:
+
+M. Plant, "The Meat Eater Problem", *Controversial Ideas* **2**:2 (2022)
+http://dx.doi.org/10.35995/jci02020002
+
+[abstract:] '''Here are two commonly held moral views. First, we must save strangers’ lives, at least if we can do so easily: you would be required to rescue a child drowning in a pond even if it will ruin your expensive suit. Second, it is wrong to eat meat because of the suffering caused to animals in factory farms. Many accept both simultaneously—Peter Singer is the pre-eminent example. I point out that these two beliefs are in a sharp and seemingly unrecognised tension and may even be incompatible. It seems universally accepted that doing or allowing a harm is permissible—and may even be required—when it is the lesser evil. I argue that, if meat eating is wrong on animal suffering grounds then, once we consider how much suffering might occur, it starts to seem plausible that saving strangers would be the greater evil than not rescuing them and is, therefore, not required after all. Given the uncertainties and subjective assessments here, reasonable people could substantially disagree. The surprising result is that a moral principle widely considered to be obviously true—we must rescue others—is not, on further reflection, obviously true and would be defensibly rejected by some. Some potential implications are discussed.'''
 
 I am the hunger that eats itself. I am the mercy that devours its young.
 
