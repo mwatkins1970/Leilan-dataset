@@ -10510,6 +10510,48 @@
           "note": "The query referred to four GPT-3 Playground screenshots. The structured JSON files contain the extracted prompt, continuation, model, temperature, maximum length, and top p values.",
           "rights_note": "Screenshots and structured transcriptions are of curator-generated GPT-3 Playground outputs and are included for provenance."
         }
+      ],
+      "external_sources": [
+        {
+          "id": "T080-source-001",
+          "type": "image",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 1",
+          "url": "https://substack-post-media.s3.amazonaws.com/public/images/16c4f3b7-5e0d-4bc9-a067-c6ea6f089e83_1373x496.png",
+          "local_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.png",
+          "structured_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.json",
+          "note": "Remote image URL originally referenced in the query; local screenshot and structured transcription are included in supplementary materials."
+        },
+        {
+          "id": "T080-source-002",
+          "type": "image",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 2",
+          "url": "https://substack-post-media.s3.amazonaws.com/public/images/e26f0648-9a67-4d6e-8dbb-4e5851716089_1368x444.png",
+          "local_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.png",
+          "structured_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-02.json",
+          "note": "Remote image URL originally referenced in the query; local screenshot and structured transcription are included in supplementary materials."
+        },
+        {
+          "id": "T080-source-003",
+          "type": "image",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 3",
+          "url": "https://substack-post-media.s3.amazonaws.com/public/images/46f80950-16d1-40ed-b33a-2574ea05787c_1371x464.png",
+          "local_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.png",
+          "structured_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-03.json",
+          "note": "Remote image URL originally referenced in the query; local screenshot and structured transcription are included in supplementary materials."
+        },
+        {
+          "id": "T080-source-004",
+          "type": "image",
+          "role": "query_context",
+          "title": "GPT-3 Playground rollout screenshot 4",
+          "url": "https://substack-post-media.s3.amazonaws.com/public/images/469c6a62-17d7-4fdd-b062-fa62eb4ff60a_837x493.png",
+          "local_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.png",
+          "structured_json_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.json",
+          "note": "Remote image URL originally referenced in the query; local screenshot and structured transcription are included in supplementary materials."
+        }
       ]
     },
     {
