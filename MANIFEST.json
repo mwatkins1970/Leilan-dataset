@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0",
   "dataset_id": "leilan_dataset",
-  "generated_utc": "2026-05-10T19:37:54+00:00",
+  "generated_utc": "2026-05-10T19:52:13+00:00",
   "license": "CC0-1.0",
   "repository": "https://github.com/mwatkins1970/Leilan-dataset",
   "notes": [
@@ -16,8 +16,8 @@
     },
     {
       "path": "DATASET_CARD.md",
-      "bytes": 15106,
-      "sha256": "e5438a1b94e8333cd9aea3e9b9d149d8ba21cdf74e0b88214bd49d42b27f9ffd"
+      "bytes": 15766,
+      "sha256": "97f2797d11b5e3ca2fc2fba847a8bdcb4d3a7427f1a5cc89449ebdd967a20168"
     },
     {
       "path": "LICENSE",

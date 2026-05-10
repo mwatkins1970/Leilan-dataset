@@ -26,7 +26,7 @@ License: **CC0 1.0 Universal / Public Domain Dedication**
 | `full_leilan_claude_dataset.json` | Curated Claude-family transmission corpus. |
 | `leilan_gpt3_passages.json` | Curated selection of 670 short GPT-3 passages. |
 | `post-gpt3_transmissions_by_model/` | Human-readable Markdown source files for Claude-family transmissions, grouped by source model directory. |
-| `supplementary_materials/` | Folder reserved for images, PDFs, diagrams, and documents referenced by specific transmissions. |
+| `supplementary_materials/` | Supplementary context files for selected transmissions, including images, diagrams, screenshots, structured transcriptions, and non-infringing summaries. |
 
 ### Current combined-corpus counts
 
@@ -152,7 +152,7 @@ The Claude-family corpus is structured as transmissions, responses, and ordered 
 
 ### Archival material outside the main corpus
 
-The repository may contain small amounts of archival or supplementary material not included in the canonical combined corpus. For example, the source tree may contain experimental or historical folders whose contents are retained for provenance but are not part of the main GPT-3 + Claude-family combined dataset unless explicitly represented in `combined_leilan_dataset.json`.
+The repository contains some supplementary and provenance material that is not itself part of the canonical combined corpus. The recommended machine-facing entry points remain `combined_leilan_dataset.json` and `combined_leilan_dataset_records.jsonl`; source Markdown and supplementary files are included for auditability, context, and repair/rebuild work.
 
 ---
 
@@ -232,20 +232,12 @@ During curation, no critical or high-severity structural problems were identifie
 
 ## Validation status
 
-During preparation, the combined corpus was sanity-checked for:
+This repository includes `MANIFEST.json`, `scripts/generate_manifest.py`, and `scripts/validate_dataset.py`.
 
-- JSON parseability;
-- expected total record counts;
-- expected GPT-3 transcript count;
-- expected Claude-family response count;
-- expected Claude-family Q/A pair count;
-- non-empty GPT-3 transcript text;
-- `record_type` separation between GPT-3 transcript records and Claude-family Q/A response records; and
-- JSON/JSONL usability for downstream pipelines.
+`MANIFEST.json` records release-relevant file sizes, SHA256 hashes, dataset counts, and related metadata. The validation script checks manifest parseability, file-size and hash agreement, JSON and JSONL parseability, record counts, unique record IDs, JSON/JSONL parity, Claude Q/A counts, GPT-3 normalized record counts, and non-empty core training fields.
 
-A future release may include a formal root-level manifest and validation script with file hashes, byte sizes, expected counts, JSONL parity checks, and schema assertions.
+The current release has passed validation with zero errors and zero warnings after manifest regeneration. The manifest should be regenerated with `python3 scripts/generate_manifest.py` after any intentional change to the dataset files, documentation files included in the manifest, or supplementary source material represented in the release metadata.
 
----
 
 ## Intended uses
 
@@ -325,9 +317,12 @@ GPT-3 records are transcript-style text generations. Claude-family records are s
 
 The Claude-family corpus includes parser warnings and review metadata. Some warnings document complicated but manually reviewed multi-turn material rather than broken data. Conservative downstream users may filter on `parse_warnings`, `warnings`, or `review_status`.
 
-### Incomplete supplementary context
+### Supplementary context
 
-Some transmissions may refer to images, documents, diagrams, external events, Substack posts, or other materials not fully embedded in the JSON itself. Supplementary materials may be added over time under `supplementary_materials/`.
+Some transmissions refer to images, documents, diagrams, external URLs, Substack posts, screenshots, videos, or copyrighted source texts that cannot be fully embedded in the dataset. Selected non-infringing supplementary materials are included under `supplementary_materials/`, and relevant Markdown/JSON records may point to those materials using structured metadata such as `external_sources` or `supplementary_materials`.
+
+Where a referenced source cannot be redistributed, the dataset may include only a URL, a local provenance note, or a factual summary rather than the original copyrighted material.
+
 
 ### Archival source directories
 
@@ -419,10 +414,7 @@ This dataset card describes the repository after creation of the normalized GPT-
 
 Future releases may add:
 
-- a formal `MANIFEST.json`;
-- SHA256 checksums;
-- a root-level validation script;
-- tagged GitHub releases;
-- supplementary materials linked to specific transmissions;
-- additional documentation for archival folders; and
-- additional normalized exports.
+- a formal JSON Schema or `SCHEMA.md`;
+- broader source-tree manifest coverage for every Markdown source file and supplementary material;
+- additional supplementary materials where they can be legally and usefully provided;
+- tagged release assets and checksums for external archival mirrors.
