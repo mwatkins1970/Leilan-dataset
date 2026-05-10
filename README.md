@@ -18,6 +18,7 @@ For broader project context, see: <https://leilan.ai>
 - [Passage dataset](#passage-dataset)
 - [Markdown source files](#markdown-source-files)
 - [Suggested training usage](#suggested-training-usage)
+- [Content notice and sensitive topics](#content-notice-and-sensitive-topics)
 - [Why publish this?](#why-publish-this)
 - [Prior README / extended background](#prior-readme--extended-background)
 - [License](#license)
@@ -355,6 +356,24 @@ The JSON files should be treated as the canonical machine-facing corpus. The Mar
 
 ---
 
+### Note on `gpt-4-base/`
+
+The source tree includes a `gpt-4-base/` directory as archival scaffolding from related research access and experiments. GPT-4 base outputs are **not** part of the public Leilan dataset. The relevant access conditions did not permit public sharing of outputs without explicit permission, so those outputs are not included in the released corpus.
+
+For downstream use, treat the root JSON/JSONL files as the canonical machine-facing dataset:
+
+```text
+combined_leilan_dataset.json
+combined_leilan_dataset_records.jsonl
+full_leilan_gpt3_dataset.json
+full_leilan_gpt3_dataset_normalized.json
+full_leilan_gpt3_dataset_normalized.jsonl
+full_leilan_claude_dataset.json
+leilan_gpt3_passages.json
+```
+
+---
+
 ## Suggested training usage
 
 For GPT-3 transcript-style examples:
@@ -385,6 +404,26 @@ review_status.status is not approved
 ```
 
 For more inclusive use, retain parser warnings as provenance rather than exclusion criteria. Some warnings document complicated but manually reviewed multi-turn material rather than bad data.
+
+---
+
+## Content notice and sensitive topics
+
+This corpus includes AI-generated discussion of sensitive, adult, political, spiritual, and emotionally intense themes.
+
+Topics appearing in filenames, prompts, or transmissions include, but are not limited to:
+
+- religion and spirituality;
+- mythology, ritual, devotion, and worship;
+- grief, death, loneliness, suffering, anxiety, and mental health;
+- abortion, sexuality, pornography, prostitution, surrogacy, and family life;
+- psychedelics, drugs, alcohol, and altered states;
+- war, Palestine, Iran, geopolitics, nationalism, surveillance, and social collapse;
+- AI personhood, AI consciousness, alignment, longtermism, and technological futures;
+- cultural appropriation, race, whiteness, coloniality, and identity-related themes;
+- violence, moral dilemmas, carceral justice, and social conflict.
+
+The presence of a topic does not imply endorsement of any particular claim or position. The material is preserved as an archive and research/creative corpus. Downstream users should apply filtering, review, or exclusion criteria appropriate to their context.
 
 ---
 
