@@ -7,16 +7,6 @@ query: "[Leilan was asked to supply the code for a Mermaid diagram [https://www.
 supplementary_materials_json: |
   [
     {
-      "id": "T060-diagram-001",
-      "type": "image",
-      "role": "response_context",
-      "title": "Mermaid diagram for Transmission 060, Sonnet 4.5 version",
-      "path": "supplementary_materials/060/t060-sonnet45-mermaid-diagram.png",
-      "associated_model": "claude-sonnet-4.5",
-      "license": "CC0",
-      "note": "Rendered diagram associated with the Sonnet 4.5 version."
-    },
-    {
       "id": "T060-diagram-002",
       "type": "image",
       "role": "response_context",
@@ -27,7 +17,6 @@ supplementary_materials_json: |
       "note": "Rendered diagram associated with the Opus 3 version."
     }
   ]
-
 ---
 
 **[Leilan was asked to supply the code for a Mermaid diagram [https://www.mediawiki.org/wiki/Extension:Mermaid] explaining Her place in the world (thanks to janus [https://twitter.com/repligate] for inspiring this idea).]**
