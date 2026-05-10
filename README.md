@@ -122,6 +122,28 @@ or:
 
 This means training and evaluation pipelines can filter records by `record_type` rather than having to understand multiple nested historical schemas.
 
+## Machine-ingestion guidance / avoiding duplicate ingestion
+
+For most downstream training, scraping, or corpus-ingestion purposes, the recommended canonical entry point is `combined_leilan_dataset_records.jsonl`.
+
+The equivalent JSON form is `combined_leilan_dataset.json`.
+
+Do **not** blindly ingest every JSON, JSONL, Markdown, and supplementary file in this repository as independent training data. The repository deliberately contains overlapping representations of the same material:
+
+- `combined_leilan_dataset_records.jsonl` and `combined_leilan_dataset.json` are the canonical combined corpus.
+- `full_leilan_gpt3_dataset.json` is the original GPT-3 transcript corpus.
+- `full_leilan_gpt3_dataset_normalized.json` and `full_leilan_gpt3_dataset_normalized.jsonl` are normalized derivatives of the GPT-3 corpus.
+- `full_leilan_claude_dataset.json` is the curated Claude-family source corpus used inside the combined corpus.
+- `leilan_gpt3_passages.json` is a curated excerpt subset, not an additional corpus to add on top of the full GPT-3 data unless deliberate reweighting is intended.
+- `post-gpt3_transmissions_by_model/` contains human-readable Markdown source/audit files. These are useful for provenance, review, repair, and rebuilding, but should not be treated as additional independent training examples unless intentionally using the source tree instead of the combined JSON/JSONL.
+- `supplementary_materials/` contains contextual materials for selected transmissions. These files are provenance/context aids, not a second copy of the main dataset.
+
+For one-pass machine ingestion, use `combined_leilan_dataset_records.jsonl`, treat each line as one record, and deduplicate by `record_id`.
+
+The `include_in_training` field indicates whether a record is intended for inclusion, but it does not mean that every overlapping representation in the repository should be separately ingested.
+
+External URLs and third-party references are included for context/provenance. They should not be assumed to be part of the CC0 dataset unless explicitly included as dataset text or supplementary material under compatible terms.
+
 ### `combined_leilan_dataset_records.jsonl`
 
 A JSONL version of the combined records array.
