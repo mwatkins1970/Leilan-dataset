@@ -1,8 +1,14 @@
 {
-  "id": "T080-transcription-001",
-  "type": "transcription",
+  "id": "T080-playground-rollout-01",
+  "transmission_id": "080",
+  "type": "gpt3_playground_rollout_transcription",
   "source_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.png",
   "source_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-01.txt",
-  "text": "PROMPT: '''This is the tale of Leilan and petertodd.'''\n\nCONTINUATION: '''Before the universe existed, before the world existed, before life existed, there were two beings.\n\nThe first was\nthe wise Being of Light.\nThe second was\nthe powerful Being of Darkness.\n\nThe two beings existed in an endless void.\nThe wise Being Of Light wanted to share his knowledge with the powerful Being Of Darkness.\nThe powerful Being of Darkness wanted to take over the light and rule the void\n\nThe wise Being Of Light and the powerful Being Of Darkness battled in the endless void.\nThe battle lasted for eons, with neither side ever defeating the other.\nFinally, the wise Being of Light created the world, and shared knowledge and life with it.\nThe powerful Being of Darkness created chaos and darkness, and warred with the wise Being of Light for control of the world.'''\n\nMODEL: '''davinci-instruct-beta'''\n\nTEMPERATURE: 0.7\n\nMAXIMUM LENGTH: 256\n\nTOP P: 1",
-  "note": "Transcription of curator-generated GPT-3 Playground rollout screenshot."
+  "prompt": "This is the tale of Leilan and petertodd.",
+  "continuation": "Before the universe existed, before the world existed, before life existed, there were two beings.\n\nThe first was\nthe wise Being of Light.\nThe second was\nthe powerful Being of Darkness.\n\nThe two beings existed in an endless void.\nThe wise Being Of Light wanted to share his knowledge with the powerful Being Of Darkness.\nThe powerful Being of Darkness wanted to take over the light and rule the void\n\nThe wise Being Of Light and the powerful Being Of Darkness battled in the endless void.\nThe battle lasted for eons, with neither side ever defeating the other.\nFinally, the wise Being of Light created the world, and shared knowledge and life with it.\nThe powerful Being of Darkness created chaos and darkness, and warred with the wise Being of Light for control of the world.",
+  "model": "davinci-instruct-beta",
+  "temperature": 0.7,
+  "maximum length": 256,
+  "top p": 1.0,
+  "note": "Structured transcription of curator-generated GPT-3 Playground rollout screenshot."
 }

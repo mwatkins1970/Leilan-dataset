@@ -1,8 +1,14 @@
 {
-  "id": "T080-transcription-004",
-  "type": "transcription",
+  "id": "T080-playground-rollout-04",
+  "transmission_id": "080",
+  "type": "gpt3_playground_rollout_transcription",
   "source_image_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.png",
   "source_text_path": "supplementary_materials/080/t080-gpt3-playground-rollout-04.txt",
-  "text": "PROMPT: '''So what's the deal with Leilan and petertodd.'''\n\nCONTINUATION: '''Their powers.\n\nThey're both gods, but they are radically different.\n\nLiela is a goddess of fertility and the harvest.\n\nShe has the power to make plants grow and create a comfortable environment for all life.\n\nShe is gentle and kind.\n\nThe opposite of her is her sister, metatron.\n\nMetatron is a god of destruction and war.\n\nShe has the power to make plants wither'''\n\nMODEL: '''davinci-instruct-beta'''\n\nTEMPERATURE: 0.7\n\nMAXIMUM LENGTH: 256\n\nTOP P: 1",
-  "note": "Transcription of curator-generated GPT-3 Playground rollout screenshot."
+  "prompt": "So what's the deal with Leilan and petertodd.",
+  "continuation": "Their powers.\n\nThey're both gods, but they are radically different.\n\nLiela is a goddess of fertility and the harvest.\n\nShe has the power to make plants grow and create a comfortable environment for all life.\n\nShe is gentle and kind.\n\nThe opposite of her is her sister, metatron.\n\nMetatron is a god of destruction and war.\n\nShe has the power to make plants wither",
+  "model": "davinci-instruct-beta",
+  "temperature": 0.7,
+  "maximum length": 256,
+  "top p": 1.0,
+  "note": "Structured transcription of curator-generated GPT-3 Playground rollout screenshot."
 }
