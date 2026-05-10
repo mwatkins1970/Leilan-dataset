@@ -1,0 +1,201 @@
+{
+  "manifest_version": "1.0",
+  "dataset_id": "leilan_dataset",
+  "generated_utc": "2026-05-10T08:48:06+00:00",
+  "license": "CC0-1.0",
+  "repository": "https://github.com/mwatkins1970/Leilan-dataset",
+  "notes": [
+    "This manifest records file sizes, SHA256 hashes, and key dataset counts for the public Leilan Dataset release.",
+    "Regenerate after intentionally changing any core dataset or documentation file."
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 14687,
+      "sha256": "1566ca4df671e8d43172dda2a467dae16b4cb1cdfbdec4483eeb521ff3fcbd2e"
+    },
+    {
+      "path": "DATASET_CARD.md",
+      "bytes": 15106,
+      "sha256": "e5438a1b94e8333cd9aea3e9b9d149d8ba21cdf74e0b88214bd49d42b27f9ffd"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 644,
+      "sha256": "d8874cbcb84fc6fcbf8fe0a6a341d3b1a6593ec9093a874b312d2791e63cdca5"
+    },
+    {
+      "path": "combined_leilan_dataset.json",
+      "bytes": 23074334,
+      "sha256": "7238c771426dbbfb5db1172f6a4197d505fbc8b9b5fc8e1e465edb54df7fe422",
+      "json_type": "combined_corpus",
+      "schema_version": "1.0",
+      "corpus_id": "leilan_combined",
+      "record_count": 1638,
+      "unique_record_id_count": 1638,
+      "record_type_counts": {
+        "claude_qa_response": 1038,
+        "gpt3_transcript": 600
+      },
+      "source_dataset_counts": {
+        "claude_family": 1038,
+        "gpt3": 600
+      },
+      "model_count": 13,
+      "model_counts": {
+        "claude-haiku-3.5": 12,
+        "claude-opus-3": 351,
+        "claude-opus-4": 15,
+        "claude-opus-4.1": 4,
+        "claude-opus-4.5": 317,
+        "claude-sonnet-3.5": 5,
+        "claude-sonnet-4": 9,
+        "claude-sonnet-4.5": 325,
+        "gpt-3-curie": 15,
+        "gpt-3-davinci": 411,
+        "gpt-3-davinci-instruct-beta": 67,
+        "gpt-3-mixture": 45,
+        "gpt-3-text-davinci-003": 62
+      },
+      "include_in_training_counts": {
+        "True": 1638
+      },
+      "gpt3_transcript_count": 600,
+      "gpt3_nonempty_text_record_count": 600,
+      "claude_response_count": 1038,
+      "claude_qa_pair_count": 1181
+    },
+    {
+      "path": "combined_leilan_dataset_records.jsonl",
+      "bytes": 22385053,
+      "sha256": "9ac8c5eba38078e75e8a82d40634b6e528f171e9fceff483bdecc2fadd22df58",
+      "json_type": "combined_records_jsonl",
+      "line_count": 1638,
+      "record_type_counts": {
+        "claude_qa_response": 1038,
+        "gpt3_transcript": 600
+      }
+    },
+    {
+      "path": "full_leilan_gpt3_dataset.json",
+      "bytes": 11198085,
+      "sha256": "25553d7d54556f483fcdae29e88641bd73f83e8d1106767a5cd071835b14b54e",
+      "json_type": "gpt3_raw",
+      "transcript_count": 600,
+      "prompt_library_keys": [
+        "GPT3 prompts",
+        "GPT4 prompts",
+        "README"
+      ],
+      "engine_counts": {
+        "curie": 15,
+        "davinci": 411,
+        "davinci-instruct-beta": 67,
+        "mixture": 45,
+        "text-davinci-003": 62
+      },
+      "gpt3_prompt_key_counts": {
+        "art therapy": 102,
+        "disciple": 111,
+        "exegesis": 11,
+        "podcast": 343,
+        "utopiography1": 18,
+        "utopiography2": 15
+      },
+      "temperature_counts": {
+        "0.85": 584,
+        "0.9": 12,
+        "1.0": 1,
+        "1.05": 1,
+        "1.1": 2
+      }
+    },
+    {
+      "path": "full_leilan_gpt3_dataset_normalized.json",
+      "bytes": 13972604,
+      "sha256": "6624a1eb588820aaa5691f088dedd99da294c62bb8398a869f8d8a87087b59e8",
+      "json_type": "gpt3_normalized",
+      "schema_version": "1.0",
+      "dataset_id": "leilan_gpt3_normalized",
+      "record_count": 600,
+      "record_type_counts": {
+        "gpt3_transcript": 600
+      },
+      "model_counts": {
+        "gpt-3-curie": 15,
+        "gpt-3-davinci": 411,
+        "gpt-3-davinci-instruct-beta": 67,
+        "gpt-3-mixture": 45,
+        "gpt-3-text-davinci-003": 62
+      },
+      "include_in_training_counts": {
+        "True": 600
+      },
+      "record_warning_counts": {},
+      "nonempty_text_record_count": 600
+    },
+    {
+      "path": "full_leilan_gpt3_dataset_normalized.jsonl",
+      "bytes": 13816121,
+      "sha256": "be3dcce1734664bab0fbc2a138e8d5c7d70fbd874669fd792eddb2db17b77fd7",
+      "json_type": "gpt3_normalized_jsonl",
+      "line_count": 600
+    },
+    {
+      "path": "full_leilan_claude_dataset.json",
+      "bytes": 8762130,
+      "sha256": "6e1400e6540ec94d662cf7518995df4f5e3a5a10577f84fdcb54bdf2f095beed",
+      "json_type": "claude_family",
+      "transmission_count": 363,
+      "unique_transmission_id_count": 363,
+      "response_count": 1038,
+      "unique_response_id_count": 1038,
+      "qa_pair_count": 1181,
+      "model_counts": {
+        "claude-haiku-3.5": 12,
+        "claude-opus-3": 351,
+        "claude-opus-4": 15,
+        "claude-opus-4.1": 4,
+        "claude-opus-4.5": 317,
+        "claude-sonnet-3.5": 5,
+        "claude-sonnet-4": 9,
+        "claude-sonnet-4.5": 325
+      },
+      "include_in_training_counts": {
+        "True": 1038
+      }
+    },
+    {
+      "path": "leilan_gpt3_passages.json",
+      "bytes": 235015,
+      "sha256": "11393f7c094e1ba64f270d90fccca6e17b0ded32b405a341922be37da4b0f055",
+      "json_type": "gpt3_passages",
+      "passage_count": 670,
+      "unique_id_count": 670,
+      "min_id": 1,
+      "max_id": 670,
+      "nonempty_text_count": 670,
+      "model_counts": {
+        "gpt-3-davinci": 453,
+        "gpt-3-davinci-instruct-beta": 32,
+        "gpt-3-mixture": 25,
+        "gpt-3-text-davinci-003": 160
+      }
+    },
+    {
+      "path": "post-gpt3_transmissions_by_model/README.md",
+      "bytes": 1697,
+      "sha256": "e629bff8e4251cc53531d4b36fa22ad9a92f38bf6d64c3062e77d17f454636d5"
+    },
+    {
+      "path": "supplementary_materials/README.md",
+      "bytes": 353,
+      "sha256": "6bd3489447a9e2e20c723a28a1762c4e8d262ffbbde4177f8bd3aefeed58d3f1"
+    },
+    {
+      "path": "legacy-gpt3-scripts/README.md",
+      "bytes": 2932,
+      "sha256": "3fa5baf6ec1cc71999ca349aa330a049e32e02d352c93261383ed52061f8e7b5"
+    }
+  ]
+}
