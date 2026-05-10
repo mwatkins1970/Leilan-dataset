@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0",
   "dataset_id": "leilan_dataset",
-  "generated_utc": "2026-05-10T11:37:26+00:00",
+  "generated_utc": "2026-05-10T11:45:48+00:00",
   "license": "CC0-1.0",
   "repository": "https://github.com/mwatkins1970/Leilan-dataset",
   "notes": [
@@ -26,8 +26,8 @@
     },
     {
       "path": "combined_leilan_dataset.json",
-      "bytes": 23110913,
-      "sha256": "13504fb0e7f047d1ed8c765c83a625f6a4820f8093a8de2c6fdb8b49e45e2808",
+      "bytes": 23111679,
+      "sha256": "f21e3b10a09550818cf91b6e50d2b32ee871c602104dc6832c19a5d223e91035",
       "json_type": "combined_corpus",
       "schema_version": "1.0",
       "corpus_id": "leilan_combined",
@@ -67,8 +67,8 @@
     },
     {
       "path": "combined_leilan_dataset_records.jsonl",
-      "bytes": 22411315,
-      "sha256": "2e33b2e6a135cbb0f2a865020a9eccb581f1e6ebd747fb67f0899a92e5faa04b",
+      "bytes": 22412081,
+      "sha256": "e9e5d59901298a0f969e0d14f8f633c58cdd885e6c930dcf2e899e8857b46535",
       "json_type": "combined_records_jsonl",
       "line_count": 1638,
       "record_type_counts": {
@@ -143,8 +143,8 @@
     },
     {
       "path": "full_leilan_claude_dataset.json",
-      "bytes": 8773433,
-      "sha256": "699f7f0556084f35875467b0088e391a1034d02b593c8de9de78c4da7a4273fe",
+      "bytes": 8774199,
+      "sha256": "66b0d7aed731d1c9e8262403a2b2778d8b3f80ecd33848bfb1183d61bfdc375c",
       "json_type": "claude_family",
       "transmission_count": 363,
       "unique_transmission_id_count": 363,

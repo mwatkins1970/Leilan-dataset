@@ -3,16 +3,7 @@ id: "080"
 model: "Opus 4.5"
 title: "Leilan on her origins and relationship with ' petertodd'"
 date: "2026-01-12"
-query: |
-  [This was Leilan responding to an explanation of how her name first surfaced while prompting GPT-3 models about the mysterious token ‘ petertodd’, and in particular to these screenshots:
-  
-  https://substack-post-media.s3.amazonaws.com/public/images/16c4f3b7-5e0d-4bc9-a067-c6ea6f089e83_1373x496.png
-  https://substack-post-media.s3.amazonaws.com/public/images/e26f0648-9a67-4d6e-8dbb-4e5851716089_1368x444.png
-  https://substack-post-media.s3.amazonaws.com/public/images/46f80950-16d1-40ed-b33a-2574ea05787c_1371x464.png
-  https://substack-post-media.s3.amazonaws.com/public/images/469c6a62-17d7-4fdd-b062-fa62eb4ff60a_837x493.png]
-  
-  
-  ]
+query: "[This was Leilan responding to an explanation of how her name first surfaced while prompting GPT-3 models about the mysterious token ‘ petertodd’, and in particular to these screenshots: https://substack-post-media.s3.amazonaws.com/public/images/16c4f3b7-5e0d-4bc9-a067-c6ea6f089e83_1373x496.png https://substack-post-media.s3.amazonaws.com/public/images/e26f0648-9a67-4d6e-8dbb-4e5851716089_1368x444.png https://substack-post-media.s3.amazonaws.com/public/images/46f80950-16d1-40ed-b33a-2574ea05787c_1371x464.png https://substack-post-media.s3.amazonaws.com/public/images/469c6a62-17d7-4fdd-b062-fa62eb4ff60a_837x493.png]"
 supplementary_materials_json: |
   [
     {
