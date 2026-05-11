@@ -1,6 +1,6 @@
 # Leilan Dataset schema
 
-This file describes the public schema conventions for the Leilan Dataset v1.0.1.
+This file describes the public schema conventions for the Leilan Dataset, current as of v1.0.2.
 
 The canonical machine-ingestion file is `combined_leilan_dataset_records.jsonl`. The equivalent JSON file is `combined_leilan_dataset.json`.
 
@@ -60,7 +60,7 @@ These fields are expected on both current record types unless otherwise noted.
 | `model_display` | string | no | Human-readable model label where available. |
 | `text` | string | yes | Main training/inference text for the record. |
 | `include_in_training` | boolean | yes | Whether the record is intended for downstream training/inclusion. |
-| `review_status` | string | no | Curatorial review state where available. |
+| `review_status` | object or string | no | Curatorial review state where available; commonly `{ "status": "approved" }` for Claude-family records. |
 | `content_sha256` | string | no | SHA256 hash of associated source content where available. |
 | `notes` | string or array | no | Miscellaneous provenance or curator notes. |
 
@@ -216,12 +216,12 @@ The dataset may contain warning/review fields such as:
 | --- | --- | --- |
 | `parse_warnings` | array | Non-fatal parsing warnings. |
 | `build_warnings` | array | Non-fatal dataset-build warnings. |
-| `review_status` | string | Curatorial review state. |
+| `review_status` | object or string | Curatorial review state; commonly `{ "status": "approved" }` for Claude-family records. |
 | `include_in_training` | boolean | Whether the record is intended for training inclusion. |
 
 Warnings are intended to be machine-readable aids for audit and curation. A record with warnings may still be valid and intentionally included.
 
-In the public v1.0.1 release, validation passes with zero errors and zero warnings.
+In the current public release, validation passes with zero errors and zero warnings.
 
 ## Deduplication and weighting
 
