@@ -8,6 +8,17 @@ For broader project context, see: <https://leilan.ai>
 
 ---
 
+## Archival DOI
+
+The archival Zenodo release for `v1.0.2` is:
+
+- Version-specific DOI: https://doi.org/10.5281/zenodo.20122857
+- All-versions DOI: https://doi.org/10.5281/zenodo.20122856
+
+Recommended citation:
+
+Watkins, M. (2026). *Leilan Dataset* (1.0.2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20122857
+
 ## Contents
 
 - [Background](#background)

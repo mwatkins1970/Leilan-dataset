@@ -1,13 +1,13 @@
 {
   "manifest_schema_version": "2.0",
   "dataset_name": "Leilan Dataset",
-  "generated_at_utc": "2026-05-11T09:14:27+00:00",
+  "generated_at_utc": "2026-05-11T14:50:29+00:00",
   "files": [
     {
       "path": "DATASET_CARD.md",
       "category": "core",
-      "bytes": 16347,
-      "sha256": "e2115d02fc00145d87d22715f7c9710a80bab845308d565481e4240ba6f380a6"
+      "bytes": 16664,
+      "sha256": "18e2a3f6508e516aa91587ffd08ea78dc980973cdf9de1bf7f678e689fd09fed"
     },
     {
       "path": "LICENSE",
@@ -18,8 +18,8 @@
     {
       "path": "README.md",
       "category": "core",
-      "bytes": 16464,
-      "sha256": "4fe38eb0ac523cfa0e150bedc368f62f40e783e7ebb0eb30ac48f021cd01be98"
+      "bytes": 16781,
+      "sha256": "9c86974caa30a0338f2f65b544c8ba549c9e250b8972dbc4d30b8d6ba798cd44"
     },
     {
       "path": "combined_leilan_dataset.json",
@@ -6663,14 +6663,14 @@
       {
         "path": "README.md",
         "category": "core",
-        "bytes": 16464,
-        "sha256": "4fe38eb0ac523cfa0e150bedc368f62f40e783e7ebb0eb30ac48f021cd01be98"
+        "bytes": 16781,
+        "sha256": "9c86974caa30a0338f2f65b544c8ba549c9e250b8972dbc4d30b8d6ba798cd44"
       },
       {
         "path": "DATASET_CARD.md",
         "category": "core",
-        "bytes": 16347,
-        "sha256": "e2115d02fc00145d87d22715f7c9710a80bab845308d565481e4240ba6f380a6"
+        "bytes": 16664,
+        "sha256": "18e2a3f6508e516aa91587ffd08ea78dc980973cdf9de1bf7f678e689fd09fed"
       },
       {
         "path": "LICENSE",

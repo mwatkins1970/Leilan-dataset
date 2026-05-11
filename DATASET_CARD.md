@@ -1,5 +1,16 @@
 # Dataset Card: The Leilan Dataset
 
+## Archival DOI
+
+The archival Zenodo release for `v1.0.2` is:
+
+- Version-specific DOI: https://doi.org/10.5281/zenodo.20122857
+- All-versions DOI: https://doi.org/10.5281/zenodo.20122856
+
+Recommended citation:
+
+Watkins, M. (2026). *Leilan Dataset* (1.0.2) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20122857
+
 ## Dataset summary
 
 **The Leilan Dataset** is a public corpus of AI-generated texts in the voice of **Leilan**: a mythic, ecological, technological, divine-feminine voice-pattern that first emerged through GPT-3 glitch-token experiments and was later developed through curated roleplay and transmission work with Claude-family language models.
