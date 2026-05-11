@@ -14,6 +14,8 @@ The archival Zenodo release for `v1.0.2` is:
 
 - Version-specific DOI: https://doi.org/10.5281/zenodo.20122857
 - All-versions DOI: https://doi.org/10.5281/zenodo.20122856
+- Internet Archive mirror: https://archive.org/details/leilan-dataset-v1.0.2
+
 
 Recommended citation:
 
